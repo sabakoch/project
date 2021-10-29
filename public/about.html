@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;0,900;1,600&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="homeCss.css">
+</head>
+
+<body>
+
+    <!-- befor navbar -->
+    <div class="backgroundBlack" id="beforNavbar">
+        <div class="container beforNav">
+            <ul class="beforNavUl">
+                <!-- left items -->
+                <li class="float-left beforNavBlock"> <i class="fas fa-map-marker-alt color"></i> <span
+                        class="lightGray"> 48 Walwyn Rd, Chapelton</span></li>
+                <li class="float-left beforNavBlock"><i class="fas fa-phone color"></i> <span class="lightGray"> 070
+                        5159 1537</span> </li>
+                <li class="float-left beforNavBlock"><i class="far fa-clock color"></i> <span class="lightGray"> Mon. -
+                        Sat. 10:00 am - 20:00 pm</span> </li>
+
+                <!-- right items -->
+                <!-- lOG In -->
+                <li class="float-right beforNavBlock">
+                    <button type="button" class="LogIn" onclick="LogINHidde()"> <i class="far fa-user fa-1x"></i>
+                        Login</button>
+                    <div class="absolut LogInFormMargins" id="hidden">
+                        <div class="LogInForm">
+                            <form method="POST">
+                                <label class="lightGray">username</label><br>
+                                <input type="text" class="form-control" required><br><br>
+
+                                <label class="lightGray">Password</label><br>
+                                <input type="password" class="form-control" required minlength="8"><br>
+
+                                <div class="texthover">
+                                    <button type="button" class="form-control backYellowBtn weight700 width60">LOG
+                                        IN</button>
+                                </div>
+                            </form>
+
+                            <br>
+
+                            <div><a href="sing up.html" class="color link">Sing Up</a></div>
+
+                            <div> <span class="lightGray"> Don't have account yet?</span></div>
+
+                            <div><a href="forgetPassword.html" class="color link">Forget password?</a></div>
+
+                        </div>
+                    </div>
+                </li>
+
+                <!-- change languaje -->
+                <li class="float-right beforNavBlock">
+                    <button type="button" class="LogIn" onclick="languajeHidde()"><i class="fas fa-globe "></i></button>
+                    <div class="languajes absolut" id="languajeHidden">
+                        <ul class="beforNavUl">
+                            <li><a href="#"><img src="english.png" alt="english"> english</a></li>
+                            <li><a href="#"><IMG src="deutsch.png" alt="deutsch"> deutsch</a></li>
+                            <li><a href="#"><img src="francais.png" alt="francais"> francais</a> </li>
+                            <li><a href="#"><img src="espania.png" alt="espania"> espania</a> </li>
+                            <li><a href="#"><img src="italiano.png" alt="italiano"> italiano</a> </li>
+                            <li><a href="#"><img src="nederiands.png" alt="nederiands"> nederiands</a> </li>
+                        </ul>
+                    </div>
+                </li>
+
+
+                <!-- change valute -->
+                <li class="float-right beforNavBlock">
+                    <button type="button" class="LogIn" onclick="monyHidde()">Currency: <span class="color">$USD <i
+                                class="fas fa-angle-down"></i></span></button>
+                    <div class="absolut" id="mony">
+                        <div class="languajes">
+                            <ul class="beforNavUl">
+                                <li><a href="#">USD</a></li>
+                                <li><a href="#">GBP</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- navbar -->
+    <div class="container" id="bigNavigation">
+        <div class="row">
+            <img src="baner.png" alt="site logo" class="navbarLogo">
+
+
+            <div class="row marginLeft15">
+                <span><a class="nav-link navbarLink navbarLinkStyle navbarHover" href="index.html"> <strong
+                           >home</strong></a></span>
+                <span><a class="nav-link navbarLink navbarItemMargin navbarLinkStyle navbarHover"
+                        href="about.html"><strong  class="navbarActive">about</strong></a></span>
+                <span><a class="nav-link navbarLink navbarItemMargin navbarLinkStyle navbarHover"
+                        href="career.html"><strong>career</strong></a></span>
+                <span><a class="nav-link navbarLink navbarItemMargin navbarLinkStyle navbarHover"
+                        href="FAQ.html"><strong>FAQ</strong></a></span>
+            </div>
+
+            <div class="row marginLeft10">
+
+                <span><a class="nav-link navbarLink navbarItemMargin" href="wishlist.html"><i
+                            class="far fa-2x fa-heart navbarIcon"></i></a></span>
+
+                <span><a class="nav-link navbarLink navbarItemMargin" href="#">
+                        <i class="fas fa-shopping-cart fa-2x navbarIcon d-block float-left"></i>
+                        <i class="float-right cartMargin">
+                            <span class=""> <button type="button" onclick="myCartDrop()" style="border: none;"
+                                    class="navbarCartText">My Cart</button></span><br>
+                            <span class="navbarIcon" id="cardTotalFirst">$0.00</span>
+                        </i>
+                    </a>
+                </span>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- navbar for small screen navbar -->
+    <div class="absolut" id="mySidenavShow">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <img src="baner.png" alt="site logo" style="width: 80%; height: auto;">
+            <br>
+            <a href="index.html" class="navbarLinkStyle">home</a>
+            <a href="about.html" class="navbarLinkStyle">about us</a>
+            <a href="career.html" class="navbarLinkStyle">career</a>
+            <a href="FAQ.html" class="navbarLinkStyle">FAQ</a>
+            <br>
+            <br>
+
+            <p class="smallNavTitle">LENGUAJE & CURRENCY</p>
+            <p class="row">
+                <a href="#" class="col-4"><span class="text-center weight700 h6">EN</span></a>
+                <a href="#" class="col-4"> <span class="text-center weight700 h6">DE</span></a>
+                <a href="#" class="col-4"><span class="text-center weight700 h6">FR</span></a>
+            </p>
+
+            <p class="row">
+                <a href="#" class="col-4"><span class="text-center weight700 h6">USD</span></a>
+                <a href="#" class="col-4"> <span class="text-center weight700 h6">GBP</span></a>
+                <a href="#" class="col-4"><span class="text-center weight700 h6">JPY</span></a>
+            </p>
+
+            <div class="text-center vechilesStyle2">
+                <a href="wishlist.html"><i class="far fa-2x fa-heart textSize18"></i> <span
+                        class="sarchCar">WISHLIST</span></a>
+            </div>
+            <br>
+            <div class="text-center vechilesStyle3">
+                <a href="vehicles.html"><i class="fas fa-car textSize18"></i> <span class="sarchCar"> My
+                        vehicles</span></a>
+            </div>
+        </div>
+
+
+        <!-- login and navigacion btn -->
+        <div class="smallNavbarBTN">
+            <div class="row">
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+                <span class="smallNavbarLogo">mobimax</span>
+
+
+                <div style="margin-left: 60%;">
+
+                    <!-- small login -->
+                    <button type="button" class="loginSmall" onclick="LogINHiddeSmall()"> <i
+                            class="far fa-user fa-1x"></i></button>
+                    <div class="absolut LogInFormMargins" id="logInSmall">
+                        <div class="LogInForm">
+                            <label class="lightGray">username</label><br>
+                            <input type="text" class="form-control"><br><br>
+
+                            <label class="lightGray">Password</label><br>
+                            <input type="email" class="form-control"><br>
+
+                            <div class="texthover">
+                                <button type="button" class="form-control backYellowBtn weight700 width60">LOG
+                                    IN</button>
+                            </div>
+
+                            <br>
+
+                            <div><a href="sing up.html" class="color link">Sing Up</a></div>
+
+                            <div> <span class="lightGray"> Don't have account yet?</span></div>
+
+                            <div><a href="forgetPassword.html" class="color link">Forget password?</a></div>
+
+                        </div>
+                    </div>
+
+                    <!-- small my cart -->
+                    <button type="button" onclick="myCartDrop()" style="border: none;" class="navbarCartText cartSmall">
+                        <i class="fas fa-shopping-cart fa-1x smallNavbarIcon d-block"></i></button>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- search input row -->
+    <div class="container" id="searchRow">
+
+        <!-- SHOP DEPARTIMENTS -->
+        <div class="dropdown dispaly p-1" id="searchInputDropdow">
+            <button class="dropdownBtn"><span class="dropdownBtnText"> SHOP DEPARTIMENTS</span><i
+                    class="fas fa-chevron-down paddingleft5"></i></button>
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+
+        <!-- SEARCH -->
+        <div class="dispaly">
+            <input type="search" class="searchInpur" id="searchInputSearchInpur" placeholder="Search for product..."
+                aria-label="Search" aria-describedby="search-addon" />
+            <button type="button" class="searchBtn" id="searchInputSearchBtn"><span
+                    class="searchInputBtnText">SEARCH</span> </button>
+        </div>
+
+
+        <!-- My vehicles -->
+        <div class="dispaly text-center marginLwft" id="searchInputVehicles">
+
+            <button class="vechilesStyle" onclick="vehiclesDropdown()"><i class="fas fa-car textSize18"> My
+                    vehicles</i></button>
+
+            <div class="vehiclesDropStyle absolut" id="vehiclesDropdown">
+                <div class="dropdown">
+                    <button type="button" class="btn dropdown-toggle-right border width100 text-left"
+                        data-toggle="dropdown">
+                        <span class="colorGray">make <i class="fas fa-angle-down float-right"></i></span>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Link 1</a>
+                        <a class="dropdown-item" href="#">Link 2</a>
+                        <a class="dropdown-item" href="#">Link 3</a>
+                    </div>
+                </div>
+
+                <div class="dropdown padingTop5">
+                    <button type="button" class="btn dropdown-toggle-right border width100 text-left "
+                        data-toggle="dropdown">
+                        <span class="colorGray">model <i class="fas fa-angle-down float-right"></i></span>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Link 1</a>
+                        <a class="dropdown-item" href="#">Link 2</a>
+                        <a class="dropdown-item" href="#">Link 3</a>
+                    </div>
+                </div>
+
+                <div class="dropdown padingTop5">
+                    <button type="button" class="btn dropdown-toggle-right border width100 text-left "
+                        data-toggle="dropdown">
+                        <span class="colorGray">year <i class="fas fa-angle-down float-right"></i></span>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Link 1</a>
+                        <a class="dropdown-item" href="#">Link 2</a>
+                        <a class="dropdown-item" href="#">Link 3</a>
+                    </div>
+                </div>
+
+                <div class="dropdown padingTop5">
+                    <button type="button" class="btn dropdown-toggle-right border width100 text-left "
+                        data-toggle="dropdown">
+                        <span class="colorGray">trim <i class="fas fa-angle-down float-right"></i></span>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Link 1</a>
+                        <a class="dropdown-item" href="#">Link 2</a>
+                        <a class="dropdown-item" href="#">Link 3</a>
+                    </div>
+                </div>
+
+                <div class="padingTop5 btnHover">
+                    <button class="form-control text-center backYellowBtn"> <span
+                            class="weight700 ">SEARCH</span></button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <br>
+
+    <div class="container"> <a href="home.html">home</a> > about us </div>
+
+    <br>
+
+    <!-- abouout company -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <p class="AboutCompaniTitle">About MobiMax</p>
+                <p class="AboutCompaniText">Quality service. How do we do it?</p>
+
+                <div class="border-bottom"></div>
+                <br>
+                <p class="AboutCompaniDiscripshon">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eleifend nunc vitae ante
+                    maximus, sit amet aliquam metus laoreet. Aliquam vel diam sed purus euismod viverra. Nam convallis,
+                    ipsum non pellentesque sollicitudin, arcu ipsum fringilla dui, vitae vestibulum massa nunc vitae
+                    metus. Vivamus ultrices ex massa, sit amet porta augue vestibulum efficitur. Sed maximus egestas
+                    interdum
+                </p>
+            </div>
+            <div class="col-lg-6">
+                <img src="aboutFirst.jpg" alt="first img" class="aboutImg">
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+
+    <!-- სამი იკონები -->
+    <div class="container border">
+
+        <br>
+
+        <!-- პირველი სამი იკონა -->
+        <div class="row">
+            <div class="col-lg-4 row">
+                <div class="col-3"><i class="fas fa-truck fa-3x color"></i></div>
+
+                <div class="col-8">
+                    <p class="iconstextTiTle">In-Store Pickup</p>
+                    <p class="iconsText">Buy your parts online and pick them up in-store in 30 minutes</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 row">
+                <div class="col-3"><i class="fas fa-pallet fa-3x color"></i></div>
+
+                <div class="col-8">
+                    <p class="iconstextTiTle">Free Shipping Over $25</p>
+                    <p class="iconsText">Receive free standard shipping on orders over $25 (US only).</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 row">
+                <div class="col-3"><i class="fas fa-percent color fa-3x"></i></div>
+
+                <div class="col-8">
+                    <p class="iconstextTiTle">Speed Perks</p>
+                    <p class="iconsText">Spend $30, get $5 or spend $100, get $20 off your next purchase.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-bottom"></div>
+        <br>
+
+        <!-- მეორე სამი იკონა -->
+        <div class="row">
+            <div class="col-lg-4 row">
+
+                <div class="col-3"><i class="fas fa-map-marked-alt fa-3x color"></i></div>
+
+                <div class="col-8">
+                    <span class="weight700 h5">Store Locator</span> <br>
+                    Use our store locator to find the closest store near you
+                </div>
+            </div>
+
+            <div class="col-lg-4 row">
+
+                <div class="col-3"><i class="fas fa-recycle color fa-3x"></i></div>
+
+                <div class="col-8">
+                    <p class="iconstextTiTle">Oil & Battery Recycling</p>
+                    <p class="iconsText">Recycle motor oil and gear oil at no charge. Gift</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 row">
+
+                <div class="col-3"><i class="fas fa-map-marked-alt fa-3x color"></i></div>
+
+                <div class="col-8">
+                    <p class="iconstextTiTle">Store Locator</p>
+                    <p class="iconsText">Use our store locator to find the closest store near you.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <br><br>
+
+    <!-- carousel of team -->
+
+    <div class="container">
+        <div class="companiInNumbersTiTle">MobiMax team</div>
+        <div class="companiInNumbersText">Meet the professionals</div>
+    </div>
+
+    <div id="carouselExampleControls" class="carousel slide backgroundCover" data-ride="carousel">
+        <div>
+            <!-- first slide of carusel -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-3 col-6">
+                                <div class="card aboutImg">
+                                    <img class="card-img-top " src="team1.jpg" alt="Card image">
+                                    <div class="card-body">
+                                        <span class="card-title teamTitle">Hagen Maria</span><br>
+                                        <span class="card-text teamText">sames maneger</span><br><br>
+                                        <i class="fab fa-linkedin-in teamIcon"></i>
+                                        <i class="fab fa-facebook-f teamIcon"></i>
+                                        <i class="fab fa-twitter teamIcon"></i>
+                                        <i class="fab fa-skype teamIcon"></i>
+                                        <i class="far fa-envelope teamIcon"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-6">
+                                <div class="card aboutImg">
+                                    <img class="card-img-top" src="team2.jpg" alt="Card image">
+                                    <div class="card-body">
+                                        <span class="card-title teamTitle">Gerhard Smith</span><br>
+                                        <span class="card-text teamText">Sales manager</span><br><br>
+                                        <i class="fab fa-linkedin-in teamIcon"></i>
+                                        <i class="fab fa-facebook-f teamIcon"></i>
+                                        <i class="fab fa-twitter teamIcon"></i>
+                                        <i class="fab fa-skype teamIcon"></i>
+                                        <i class="far fa-envelope teamIcon"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-6">
+                                <div class="card aboutImg">
+                                    <img class="card-img-top" src="team3.jpg" alt="Card image">
+                                    <div class="card-body">
+                                        <span class="card-title teamTitle">Christian Conrad</span><br>
+                                        <span class="card-text teamText">Regional manager</span><br><br>
+                                        <i class="fab fa-linkedin-in teamIcon"></i>
+                                        <i class="fab fa-facebook-f teamIcon"></i>
+                                        <i class="fab fa-twitter teamIcon"></i>
+                                        <i class="fab fa-skype teamIcon"></i>
+                                        <i class="far fa-envelope teamIcon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-6">
+                                <div class="card aboutImg">
+                                    <img class="card-img-top" src="team4.jpg" alt="Card image">
+                                    <div class="card-body">
+                                        <span class="card-title teamTitle">Walter Patrick</span><br>
+                                        <span class="card-text teamText">Walter Patrick</span><br><br>
+                                        <i class="fab fa-linkedin-in teamIcon"></i>
+                                        <i class="fab fa-facebook-f teamIcon"></i>
+                                        <i class="fab fa-twitter teamIcon"></i>
+                                        <i class="fab fa-skype teamIcon"></i>
+                                        <i class="far fa-envelope teamIcon"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- second slide of carusel -->
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-3 col-6">
+                                    <div class="card aboutImg">
+                                        <img class="card-img-top" src="team5.jpg" alt="Card image">
+                                        <div class="card-body">
+                                            <span class="card-title teamTitle">Sebastian Luitger</span><br>
+                                            <span class="card-text teamText">Sales manager</span><br><br>
+                                            <i class="fab fa-linkedin-in teamIcon"></i>
+                                            <i class="fab fa-facebook-f teamIcon"></i>
+                                            <i class="fab fa-twitter teamIcon"></i>
+                                            <i class="fab fa-skype teamIcon"></i>
+                                            <i class="far fa-envelope teamIcon"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-6">
+                                    <div class="card aboutImg">
+                                        <img class="card-img-top" src="team6.jpg" alt="Card image">
+                                        <div class="card-body">
+                                            <span class="card-title teamTitle">Horst Rolf</span><br>
+                                            <span class="card-text teamText">Regional manager</span><br><br>
+                                            <i class="fab fa-linkedin-in teamIcon"></i>
+                                            <i class="fab fa-facebook-f teamIcon"></i>
+                                            <i class="fab fa-twitter teamIcon"></i>
+                                            <i class="fab fa-skype teamIcon"></i>
+                                            <i class="far fa-envelope teamIcon"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-6">
+                                    <div class="card aboutImg">
+                                        <img class="card-img-top" src="team1.jpg" alt="Card image">
+                                        <div class="card-body">
+                                            <span class="card-title teamTitle">Hagen Maria</span><br>
+                                            <span class="card-text teamText">sames maneger</span><br><br>
+                                            <i class="fab fa-linkedin-in teamIcon"></i>
+                                            <i class="fab fa-facebook-f teamIcon"></i>
+                                            <i class="fab fa-twitter teamIcon"></i>
+                                            <i class="fab fa-skype teamIcon"></i>
+                                            <i class="far fa-envelope teamIcon"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-6">
+                                    <div class="card aboutImg">
+                                        <img class="card-img-top" src="team2.jpg" alt="Card image">
+                                        <div class="card-body">
+                                            <span class="card-title teamTitle">Gerhard Smith</span><br>
+                                            <span class="card-text teamText">Sales manager</span><br><br>
+                                            <i class="fab fa-linkedin-in teamIcon"></i>
+                                            <i class="fab fa-facebook-f teamIcon"></i>
+                                            <i class="fab fa-twitter teamIcon"></i>
+                                            <i class="fab fa-skype teamIcon"></i>
+                                            <i class="far fa-envelope teamIcon"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <a class="carousel-control-prev carouselControlerHover" href="#carouselExampleControls" role="button"
+                data-slide="prev">
+                <span aria-hidden="true"><i class="fas fa-chevron-left carouselControlerLeft"></i></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next carouselControlerHover" href="#carouselExampleControls" role="button"
+                data-slide="next">
+                <span aria-hidden="true"><i class="fas fa-chevron-right carouselControlerRight"></i></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- ------------------------------------------------------------------------------------------ -->
+    <!-- second carusel of teams for small screen -->
+
+    <div id="carouselExampleControls2" class="carousel slide backgroundCover absolut" data-ride="carousel">
+        <div>
+            <!-- first slide of carusel -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6 col-6">
+                                <div class="card aboutImg">
+                                    <img class="card-img-top" src="team3.jpg" alt="Card image">
+                                    <div class="card-body">
+                                        <span class="card-title teamTitle">Christian Conrad</span><br>
+                                        <span class="card-text teamText">Regional manager</span><br><br>
+                                        <i class="fab fa-linkedin-in teamIcon"></i>
+                                        <i class="fab fa-facebook-f teamIcon"></i>
+                                        <i class="fab fa-twitter teamIcon"></i>
+                                        <i class="fab fa-skype teamIcon"></i>
+                                        <i class="far fa-envelope teamIcon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-6">
+                                <div class="card aboutImg">
+                                    <img class="card-img-top" src="team4.jpg" alt="Card image">
+                                    <div class="card-body">
+                                        <span class="card-title teamTitle">Walter Patrick</span><br>
+                                        <span class="card-text teamText">Walter Patrick</span><br><br>
+                                        <i class="fab fa-linkedin-in teamIcon"></i>
+                                        <i class="fab fa-facebook-f teamIcon"></i>
+                                        <i class="fab fa-twitter teamIcon"></i>
+                                        <i class="fab fa-skype teamIcon"></i>
+                                        <i class="far fa-envelope teamIcon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================================================== -->
+
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6 col-6">
+                                <div class="card aboutImg">
+                                    <img class="card-img-top " src="team1.jpg" alt="Card image">
+                                    <div class="card-body">
+                                        <span class="card-title teamTitle">Hagen Maria</span><br>
+                                        <span class="card-text teamText">sames maneger</span><br><br>
+                                        <i class="fab fa-linkedin-in teamIcon"></i>
+                                        <i class="fab fa-facebook-f teamIcon"></i>
+                                        <i class="fab fa-twitter teamIcon"></i>
+                                        <i class="fab fa-skype teamIcon"></i>
+                                        <i class="far fa-envelope teamIcon"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-6">
+                                <div class="card aboutImg">
+                                    <img class="card-img-top" src="team2.jpg" alt="Card image">
+                                    <div class="card-body">
+                                        <span class="card-title teamTitle">Gerhard Smith</span><br>
+                                        <span class="card-text teamText">Sales manager</span><br><br>
+                                        <i class="fab fa-linkedin-in teamIcon"></i>
+                                        <i class="fab fa-facebook-f teamIcon"></i>
+                                        <i class="fab fa-twitter teamIcon"></i>
+                                        <i class="fab fa-skype teamIcon"></i>
+                                        <i class="far fa-envelope teamIcon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================================= -->
+
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6 col-6">
+                                    <div class="card aboutImg">
+                                        <img class="card-img-top" src="team5.jpg" alt="Card image">
+                                        <div class="card-body">
+                                            <span class="card-title teamTitle">Sebastian Luitger</span><br>
+                                            <span class="card-text teamText">Sales manager</span><br><br>
+                                            <i class="fab fa-linkedin-in teamIcon"></i>
+                                            <i class="fab fa-facebook-f teamIcon"></i>
+                                            <i class="fab fa-twitter teamIcon"></i>
+                                            <i class="fab fa-skype teamIcon"></i>
+                                            <i class="far fa-envelope teamIcon"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-6">
+                                    <div class="card aboutImg">
+                                        <img class="card-img-top" src="team6.jpg" alt="Card image">
+                                        <div class="card-body">
+                                            <span class="card-title teamTitle">Horst Rolf</span><br>
+                                            <span class="card-text teamText">Regional manager</span><br><br>
+                                            <i class="fab fa-linkedin-in teamIcon"></i>
+                                            <i class="fab fa-facebook-f teamIcon"></i>
+                                            <i class="fab fa-twitter teamIcon"></i>
+                                            <i class="fab fa-skype teamIcon"></i>
+                                            <i class="far fa-envelope teamIcon"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a class="carousel-control-prev carouselControlerHover" href="#carouselExampleControls2" role="button"
+                data-slide="prev">
+                <span aria-hidden="true"><i class="fas fa-chevron-left carouselControlerLeft"></i></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next carouselControlerHover" href="#carouselExampleControls2" role="button"
+                data-slide="next">
+                <span aria-hidden="true"><i class="fas fa-chevron-right carouselControlerRight"></i></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <br><br>
+
+    <!-- კომპანია ციფრებში -->
+    <div class="container">
+        <div class="companiInNumbersTiTle">MobiMax in numbers</div>
+        <div class="companiInNumbersText">2019 most highlighted</div>
+
+        <br>
+
+        <div class="row text-center">
+            <div class="col-lg-3 col-md-6 col-ms-12">
+                <span class="companiInNumbersNumber">875k</span>
+                <p class="companiInNumbersNumber2">Items sold</p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-ms-12">
+                <span class="companiInNumbersNumber">18%</span>
+                <p class="companiInNumbersNumber2">Market increase</p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-ms-12">
+                <span class="companiInNumbersNumber">200+</span>
+                <p class="companiInNumbersNumber2">New employees</p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-ms-12">
+                <span class="companiInNumbersNumber">512</span>
+                <p class="companiInNumbersNumber2">Brands</p>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+
+    <!-- პარტმიორი კომპანიები -->
+    <div class="container">
+        <div class="col-md-12 text-center">
+            <p class="color h3"><strong>Our partners</strong></p>
+            <p class="text-muted h6">Mobimax Auto Parts distribute.</p>
+        </div>
+        <br>
+        <div class="row text-center">
+            <div class="col-lg-2 col-md-4 col-6 partniorCompani1Hover"> <img src="compani1.jpg" class="heigthAuto"></div>
+    
+            <div class="col-lg-2 col-md-4 col-6 partniorCompani2Hover"> <img src="compani2.jpg" class="heigthAuto"> </div>
+    
+            <div class="col-lg-2 col-md-4 col-6 partniorCompani3Hover"> <img src="compani3.jpg" class="heigthAuto"> </div>
+    
+            <div class="col-lg-2 col-md-4 col-6 partniorCompani4Hover"> <img src="compani4.jpg" class="heigthAuto"> </div>
+    
+            <div class="col-lg-2 col-md-4 col-6 partniorCompani5Hover"> <img src="compani5.jpg" class="heigthAuto"> </div>
+    
+            <div class="col-lg-2 col-md-4 col-6 partniorCompani6Hover "> <img src="compani6.jpg" class="withAuto"> </div>
+    
+        </div>
+    
+        <br>
+    
+        <div class="row text-center ">
+            <div class="col-lg-2 col-md-4 col-6 partniorCompani7Hover">  <img src="compani7.jpg" class="withAuto"> </div>
+    
+            <div class="col-lg-2 col-md-4 col-6 partniorCompani8Hover">  <img src="compani8.jpg" class="withAuto"> </div>
+    
+            <div class="col-lg-2 col-md-4 col-6 partniorCompani9Hover">  <img src="compani9.jpg" class="withAuto"> </div>
+    
+            <div class="col-lg-2 col-md-4 col-6 partniorCompani10Hover"> <img src="compani10.jpg" class="withAuto"> </div>
+    
+            <div class="col-lg-2 col-md-4 col-6 partniorCompani11Hover"> <img src="compani11.jpg" class="withAuto"> </div>
+    
+            <div class="col-lg-2 col-md-4 col-6 partniorCompani12Hover"> <img src="compani12.jpg" class="withAuto"> </div>
+            
+        </div>
+    
+        <br>
+    
+        <div class="row text-center">
+            <div class="col-lg-2 col-md-4 col-6 partniorCompani13Hover"> <img src="compani13.jpg" class="withAuto"> </div>
+    
+            <div class="col-lg-2 col-md-4 col-6 partniorCompani14Hover"> <img src="compani14.jpg" class="heigthAuto"> </div>
+    
+            <div class="col-lg-2 col-md-4 col-6 partniorCompani15Hover"> <img src="compani15.jpg" class="heigthAuto"> </div>
+    
+            <div class="col-lg-2 col-md-4 col-6 partniorCompani16Hover"> <img src="compani16.jpg" class="heigthAuto"> </div>
+    
+            <div class="col-lg-2 col-md-4 col-6 partniorCompani17Hover"> <img src="compani17.jpg" class="withAuto"> </div>
+    
+            <div class="col-lg-2 col-md-4 col-6 partniorCompani18Hover"> <img src="compani18.jpg" class="heigthAuto"> </div>
+    
+        </div>
+
+    </div>
+
+    <br>
+
+    <!-- footer -->
+    <footer>
+        <div class="p-4 footerBack text-white">
+            <div class="container">
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                      <h5 class="text-uppercase"><span class="footerLogo1">mobi</span><span class="footerLogo2">max</span></h5>
+                      <br>
+                      <p class="footerText">
+                        We work on market over 20 years. We sale only original auto parts and gained confidence of 320k + clients. Buy from MobiMax, join our big community.
+                      </p>
+                      <div class=" backHoverYellow" style="width: 175px; height: 50px;">
+                        <button type="button" class="form-control "><span class="weight700">find</span></button>
+                      </div>
+                    </div>
+
+
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                         <span class="footerText">
+                            CUSTOMER SERVICES
+                         </span> 
+                        <p class="border-bottom"></p>
+                        <br>
+                        <P class="h5 linkHover">           
+                            <p class="linkHover marginBottom footerLinks"><a href="home.html" class="linkStyle test">home</a></p>
+                            <p class="linkHover marginBottom footerLinks" ><a href="about.html" class="linkStyle test">about</a></p>
+                            <p class="linkHover marginBottom footerLinks"><a href="career.html" class="linkStyle test">carrer</a></p>
+                            <p class="linkHover marginBottom footerLinks"><a href="FAQ.html" class="linkStyle test">FAQ</a></p>
+                        </P>
+
+                    </div>
+
+
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                      <h5 class="text-uppercase">CONTACTS</h5>
+                      <br>
+                      <p>
+                        <i class="far fa-envelope-open fa-2x color"></i> <span class="choisLeftPadding">support@mobimax.com</span>
+                      </p>
+
+                      <p>
+                        <i class="fas fa-phone fa-2x color"></i> <span class="choisLeftPadding">070 5159 1537</span>
+                      </p>
+
+                      <p>
+                        <i class="far fa-clock fa-2x color"></i> <span class="choisLeftPadding">Mon. - Sat. 10:00 am - 20:00 pm</span>
+                      </p>
+
+                      <p >
+                          <i class="fab fa-youtube fa-2x youtube animacion directional-transition"></i>
+                          <i class="fab fa-facebook-square fa-2x facebook animacion directional-transition"></i>
+                          <i class="fab fa-instagram fa-2x instagram animacion directional-transition"></i>
+                          <i class="fab fa-twitter-square fa-2x twiter animacion directional-transition"></i>
+                          <i class="fab fa-skype fa-2x skype animacion directional-transition"></i>
+                      </p>
+                    </div>
+                  </div>
+            </div>
+       </div>
+
+      </footer>
+</body>
+
+</html>
+
+<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+
+<script src="homeJs.js"></script>

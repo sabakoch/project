@@ -1,0 +1,2903 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="homeCss.css">
+</head>
+
+<body>
+
+    <!-- befor navbar -->
+    <div class="backgroundBlack" id="beforNavbar">
+        <div class="container beforNav">
+            <ul class="beforNavUl">
+                <!-- left items -->
+                <li class="float-left beforNavBlock"> <i class="fas fa-map-marker-alt color"></i> <span
+                        class="lightGray"> 48 Walwyn Rd, Chapelton</span></li>
+                <li class="float-left beforNavBlock"><i class="fas fa-phone color"></i> <span class="lightGray"> 070
+                        5159 1537</span> </li>
+                <li class="float-left beforNavBlock"><i class="far fa-clock color"></i> <span class="lightGray"> Mon. -
+                        Sat. 10:00 am - 20:00 pm</span> </li>
+
+                <!-- right items -->
+                <!-- lOG In -->
+                <li class="float-right beforNavBlock">
+                    <button type="button" class="LogIn" onclick="LogINHidde()"> <i class="far fa-user fa-1x"></i>
+                        Login</button>
+                    <div class="absolut LogInFormMargins" id="hidden">
+                        <div class="LogInForm">
+                            <form method="POST">
+                                <label class="lightGray">username</label><br>
+                                <input type="text" class="form-control" required><br><br>
+
+                                <label class="lightGray">Password</label><br>
+                                <input type="password" class="form-control" required minlength="8"><br>
+
+                                <div class="texthover">
+                                    <button type="button" class="form-control backYellowBtn weight700 width60">LOG
+                                        IN</button>
+                                </div>
+                            </form>
+
+                            <br>
+
+                            <div><a href="sing up.html" class="color link">Sing Up</a></div>
+
+                            <div> <span class="lightGray"> Don't have account yet?</span></div>
+
+                            <div><a href="forgetPassword.html" class="color link">Forget password?</a></div>
+
+                        </div>
+                    </div>
+                </li>
+
+                <!-- change languaje -->
+                <li class="float-right beforNavBlock">
+                    <button type="button" class="LogIn" onclick="languajeHidde()"><i class="fas fa-globe "></i></button>
+                    <div class="languajes absolut" id="languajeHidden">
+                        <ul class="beforNavUl">
+                            <li><a href="#"><img src="english.png" alt="english"> english</a></li>
+                            <li><a href="#"><IMG src="deutsch.png" alt="deutsch"> deutsch</a></li>
+                            <li><a href="#"><img src="francais.png" alt="francais"> francais</a> </li>
+                            <li><a href="#"><img src="espania.png" alt="espania"> espania</a> </li>
+                            <li><a href="#"><img src="italiano.png" alt="italiano"> italiano</a> </li>
+                            <li><a href="#"><img src="nederiands.png" alt="nederiands"> nederiands</a> </li>
+                        </ul>
+                    </div>
+                </li>
+
+
+                <!-- change valute -->
+                <li class="float-right beforNavBlock">
+                    <button type="button" class="LogIn" onclick="monyHidde()">Currency: <span class="color">$USD <i
+                                class="fas fa-angle-down"></i></span></button>
+                    <div class="absolut" id="mony">
+                        <div class="languajes">
+                            <ul class="beforNavUl">
+                                <li><a href="#">USD</a></li>
+                                <li><a href="#">GBP</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- navbar -->
+    <div class="container" id="bigNavigation">
+        <div class="row">
+            <img src="baner.png" alt="site logo" class="navbarLogo">
+
+
+            <div class="row marginLeft15">
+                <span><a class="nav-link navbarLink navbarLinkStyle navbarHover" href="index.html"> <strong
+                            class="navbarActive">home</strong></a></span>
+                <span><a class="nav-link navbarLink navbarItemMargin navbarLinkStyle navbarHover"
+                        href="about.html"><strong>about</strong></a></span>
+                <span><a class="nav-link navbarLink navbarItemMargin navbarLinkStyle navbarHover"
+                        href="career.html"><strong>career</strong></a></span>
+                <span><a class="nav-link navbarLink navbarItemMargin navbarLinkStyle navbarHover"
+                        href="FAQ.html"><strong>FAQ</strong></a></span>
+            </div>
+
+            <div class="row marginLeft10">
+
+                <span><a class="nav-link navbarLink navbarItemMargin" href="wishlist.html"><i
+                            class="far fa-2x fa-heart navbarIcon"></i></a></span>
+
+                <span><a class="nav-link navbarLink navbarItemMargin" href="#">
+                        <i class="fas fa-shopping-cart fa-2x navbarIcon d-block float-left"></i>
+                        <i class="float-right cartMargin">
+                            <span class=""> <button type="button" onclick="myCartDrop()" style="border: none;"
+                                    class="navbarCartText">My Cart</button></span><br>
+                            <span class="navbarIcon" id="cardTotalFirst">$0.00</span>
+                        </i>
+                    </a>
+                </span>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- navbar for small screen navbar -->
+    <div class="absolut" id="mySidenavShow">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <img src="baner.png" alt="site logo" style="width: 80%; height: auto;">
+            <br>
+            <a href="index.html" class="navbarLinkStyle">home</a>
+            <a href="about.html" class="navbarLinkStyle">about us</a>
+            <a href="career.html" class="navbarLinkStyle">career</a>
+            <a href="FAQ.html" class="navbarLinkStyle">FAQ</a>
+            <br>
+            <br>
+
+            <p class="smallNavTitle">LENGUAJE & CURRENCY</p>
+            <p class="row">
+                <a href="#" class="col-4"><span class="text-center weight700 h6">EN</span></a>
+                <a href="#" class="col-4"> <span class="text-center weight700 h6">DE</span></a>
+                <a href="#" class="col-4"><span class="text-center weight700 h6">FR</span></a>
+            </p>
+
+            <p class="row">
+                <a href="#" class="col-4"><span class="text-center weight700 h6">USD</span></a>
+                <a href="#" class="col-4"> <span class="text-center weight700 h6">GBP</span></a>
+                <a href="#" class="col-4"><span class="text-center weight700 h6">JPY</span></a>
+            </p>
+
+            <div class="text-center vechilesStyle2">
+                <a href="wishlist.html"><i class="far fa-2x fa-heart textSize18"></i> <span
+                        class="sarchCar">WISHLIST</span></a>
+            </div>
+            <br>
+            <div class="text-center vechilesStyle3">
+                <a href="vehicles.html"><i class="fas fa-car textSize18"></i> <span class="sarchCar"> My
+                        vehicles</span></a>
+            </div>
+        </div>
+
+
+        <!-- login and navigacion btn -->
+        <div class="smallNavbarBTN">
+            <div class="row">
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+                <span class="smallNavbarLogo">mobimax</span>
+
+
+                <div style="margin-left: 60%;">
+
+                    <!-- small login -->
+                    <button type="button" class="loginSmall" onclick="LogINHiddeSmall()"> <i
+                            class="far fa-user fa-1x"></i></button>
+                    <div class="absolut LogInFormMargins" id="logInSmall">
+                        <div class="LogInForm">
+                            <label class="lightGray">username</label><br>
+                            <input type="text" class="form-control"><br><br>
+
+                            <label class="lightGray">Password</label><br>
+                            <input type="email" class="form-control"><br>
+
+                            <div class="texthover">
+                                <button type="button" class="form-control backYellowBtn weight700 width60">LOG
+                                    IN</button>
+                            </div>
+
+                            <br>
+
+                            <div><a href="sing up.html" class="color link">Sing Up</a></div>
+
+                            <div> <span class="lightGray"> Don't have account yet?</span></div>
+
+                            <div><a href="forgetPassword.html" class="color link">Forget password?</a></div>
+
+                        </div>
+                    </div>
+
+                    <!-- small my cart -->
+                    <button type="button" onclick="myCartDrop()" style="border: none;" class="navbarCartText cartSmall">
+                        <i class="fas fa-shopping-cart fa-1x smallNavbarIcon d-block"></i></button>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- search input row -->
+    <div class="container" id="searchRow">
+
+        <!-- SHOP DEPARTIMENTS -->
+        <div class="dropdown dispaly p-1" id="searchInputDropdow">
+            <button class="dropdownBtn"><span class="dropdownBtnText"> SHOP DEPARTIMENTS</span><i
+                    class="fas fa-chevron-down paddingleft5"></i></button>
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+
+        <!-- SEARCH -->
+        <div class="dispaly">
+            <input type="search" class="searchInpur" id="searchInputSearchInpur" placeholder="Search for product..."
+                aria-label="Search" aria-describedby="search-addon" />
+            <button type="button" class="searchBtn" id="searchInputSearchBtn"><span
+                    class="searchInputBtnText">SEARCH</span> </button>
+        </div>
+
+
+        <!-- My vehicles -->
+        <div class="dispaly text-center marginLwft" id="searchInputVehicles">
+
+            <button class="vechilesStyle" onclick="vehiclesDropdown()"><i class="fas fa-car textSize18"> My
+                    vehicles</i></button>
+
+            <div class="vehiclesDropStyle absolut" id="vehiclesDropdown">
+                <div class="dropdown">
+                    <button type="button" class="btn dropdown-toggle-right border width100 text-left"
+                        data-toggle="dropdown">
+                        <span class="colorGray">make <i class="fas fa-angle-down float-right"></i></span>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Link 1</a>
+                        <a class="dropdown-item" href="#">Link 2</a>
+                        <a class="dropdown-item" href="#">Link 3</a>
+                    </div>
+                </div>
+
+                <div class="dropdown padingTop5">
+                    <button type="button" class="btn dropdown-toggle-right border width100 text-left "
+                        data-toggle="dropdown">
+                        <span class="colorGray">model <i class="fas fa-angle-down float-right"></i></span>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Link 1</a>
+                        <a class="dropdown-item" href="#">Link 2</a>
+                        <a class="dropdown-item" href="#">Link 3</a>
+                    </div>
+                </div>
+
+                <div class="dropdown padingTop5">
+                    <button type="button" class="btn dropdown-toggle-right border width100 text-left "
+                        data-toggle="dropdown">
+                        <span class="colorGray">year <i class="fas fa-angle-down float-right"></i></span>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Link 1</a>
+                        <a class="dropdown-item" href="#">Link 2</a>
+                        <a class="dropdown-item" href="#">Link 3</a>
+                    </div>
+                </div>
+
+                <div class="dropdown padingTop5">
+                    <button type="button" class="btn dropdown-toggle-right border width100 text-left "
+                        data-toggle="dropdown">
+                        <span class="colorGray">trim <i class="fas fa-angle-down float-right"></i></span>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Link 1</a>
+                        <a class="dropdown-item" href="#">Link 2</a>
+                        <a class="dropdown-item" href="#">Link 3</a>
+                    </div>
+                </div>
+
+                <div class="padingTop5 btnHover">
+                    <button class="form-control text-center backYellowBtn"> <span
+                            class="weight700 ">SEARCH</span></button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- MY CART DROPDOWN -->
+    <div class="container absolut MyCartMargins"
+        style="width: 300px; background-color: white; height: auto; position: absolute;" id="MyCartDrop">
+        <div class="addTocard">
+
+        </div>
+
+        <br>
+        <div class="priceTotal">
+            <strong class="priceTotal-title">Subtotal:</strong>
+            <span class="priceTotal-price">$0</span>
+        </div>
+    </div>
+
+
+    <!-- first background image -->
+    <div class="backgroundImg">
+        <!-- პირველი სურათიფონის თეთრი დივი -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4  imgDivBack">
+
+                    <div class="padingTop5 firstBackImgLabel">CAR PARTS FOR ANY CAR</div>
+                    <br>
+                    <div class="dropdown">
+                        <button type="button" class="btn dropdown-toggle-right border width100 text-left"
+                            data-toggle="dropdown">
+                            <span class="colorGray">make <i class="fas fa-angle-down float-right"></i></span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Link 1</a>
+                            <a class="dropdown-item" href="#">Link 2</a>
+                            <a class="dropdown-item" href="#">Link 3</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown padingTop5">
+                        <button type="button" class="btn dropdown-toggle-right border width100 text-left "
+                            data-toggle="dropdown">
+                            <span class="colorGray">model <i class="fas fa-angle-down float-right"></i></span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Link 1</a>
+                            <a class="dropdown-item" href="#">Link 2</a>
+                            <a class="dropdown-item" href="#">Link 3</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown padingTop5">
+                        <button type="button" class="btn dropdown-toggle-right border width100 text-left "
+                            data-toggle="dropdown">
+                            <span class="colorGray">year <i class="fas fa-angle-down float-right"></i></span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Link 1</a>
+                            <a class="dropdown-item" href="#">Link 2</a>
+                            <a class="dropdown-item" href="#">Link 3</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown padingTop5">
+                        <button type="button" class="btn dropdown-toggle-right border width100 text-left "
+                            data-toggle="dropdown">
+                            <span class="colorGray">trim <i class="fas fa-angle-down float-right"></i></span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Link 1</a>
+                            <a class="dropdown-item" href="#">Link 2</a>
+                            <a class="dropdown-item" href="#">Link 3</a>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="firstBackImgSearchBy">or search by vin</div>
+
+                    <br>
+
+                    <div>
+                        <input type="text" class="form-control colorGray" placeholder="Enter VIN">
+                    </div>
+
+                    <div class="padingTop5 btnHover">
+                        <button class="form-control text-center backYellowBtn"> <span
+                                class="weight700 ">SEARCH</span></button>
+                    </div>
+
+                </div>
+
+
+                <!-- პრველი ფონი სურათის ტექსთი -->
+                <div class="col-lg-8  imgDivText" id="firstBackImgTitle">
+                    <p class="size80 ">
+                        <strong>
+                            <p class="backImgTextWhite"> WELCOME TO</p>
+                            <p class="padingTop- backImgTextOrange">MOBIMAX</p>
+                        </strong>
+                    </p>
+                    <h4 class="backImgLastText">We sale only original auto parts and gained <br> confidence of 320k +
+                        clients.</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- first greed sistem images -->
+    <div class="container">
+        <div class="col-md-12 text-center">
+            <p class="color greedSistremPartsOfCar">Popular parts for your car</p>
+            <p class="colorGray greedSistremPartsOfCar2">View a selection of our most popular car parts</p>
+        </div>
+        <br>
+
+        <div class="row">
+            <div class="col-lg-3 col-md-6  text-center">
+                <img src="greed-1.jpg" alt="greed-1"> <br>
+                <p class="firstGreedText">BATTERIES</p>
+            </div>
+
+            <div class="col-lg-3 col-md-6  text-center">
+                <img src="greed-2.jpg" alt="greed-1"><br>
+                <p class="firstGreedText">BRAKE DISKS & PADS</p>
+            </div>
+
+            <div class="col-lg-3 col-md-6   text-center">
+                <img src="greed-3.jpg" alt="greed-1"><br>
+                <p class="firstGreedText">ENGINE PARTS</p>
+            </div>
+
+            <div class="col-lg-3 col-md-6   text-center">
+                <img src="greed-4.jpg" alt="greed-1"><br>
+                <p class="firstGreedText">LIGHTING</p>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-lg-3 col-md-6  text-center">
+                <img src="greed-5.jpg" alt="greed-1"><br>
+                <p class="firstGreedText">OIL & LUBRICANTS</p>
+            </div>
+
+            <div class="col-lg-3 col-md-6  text-center">
+                <img src="greed-6.jpg" alt="greed-1"><br>
+                <p class="firstGreedText">SERVICE KITS</p>
+            </div>
+
+            <div class="col-lg-3 col-md-6  text-center">
+                <img src="greed-7.jpg" alt="greed-1"><br>
+                <p class="firstGreedText">STEERING</p>
+            </div>
+
+            <div class="col-lg-3 col-md-6   text-center">
+                <img src="greed-8.jpg" alt="greed-1"><br>
+                <p class="firstGreedText">SUSPENSION</p>
+            </div>
+        </div>
+
+    </div>
+
+    <br>
+
+    <!-- carousel withe animacia -->
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-8  col-12">
+
+                <!-- carousel for big screen -->
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"
+                    style="margin-left: -15px;">
+
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+
+                    <div class="carousel-inner">
+
+                        <!-- first -->
+                        <div class="carousel-item active caruselBackgrounImg row chanjeCarousselHigthMedium">
+                            <div class="col-6 text-center caruselTextpadding">
+                                <div id="test1">
+                                    <span class="caruselImgText1 carouselBlackText" id="textOne">TACKE CARE</span>
+                                    <span class="caruselImgText2 carouselBlackText" id="textTwo">OF YOUR TIRES </span>
+                                    <p class="caruselImgText3 carouselYellowText" id="textThry">22</p>
+                                    <p class="caruselImgText5 carouselBlackText"> <span
+                                            class="caruselImgText4 carouselBlackText">OFF</span> <span
+                                            class="texthover"><button type="button" class="btnStyle weight700"
+                                                id="shop">SHOP NOW</button></span> </p>
+                                </div>
+
+                            </div>
+                            <img src="caruselImgAnimace-1.png" class="caruselImg1 float-right">
+                        </div>
+
+                        <!-- second -->
+                        <div class="carousel-item caruselBackgrounImg2 row chanjeCarousselHigthMedium">
+                            <div class="col-6 text-center caruselTextpadding ">
+                                <span class="caruselImgText1 carouselWhiteYText" id="textOne">READY FOR </span>
+                                <span class="caruselImgText2 carouselWhiteYText" id="textTwo">OFF ROAD? </span>
+                                <p class="caruselImgText3 carouselYellowText" id="textThry">18%</p>
+                                <p class="caruselImgText5 mx-auto carouselWhiteYText"> <span
+                                        class="caruselImgText4 carouselWhiteYText">OFF</span> <span
+                                        class="texthover"><button type="button" class="btnStyle weight700">SHOP
+                                            NOW</button></span> </p>
+                            </div>
+                            <img src="caruselImgAnimace-2.png" class="caruselImg2 col-6">
+                        </div>
+
+                        <!-- third -->
+                        <div class="carousel-item caruselBackgrounImg3 row chanjeCarousselHigthMedium">
+                            <div class="col-6 text-center caruselTextpadding ">
+                                <span class="caruselImgText1 carouselWhiteYText" id="textOne"><strong>READY FOR</strong>
+                                </span>
+                                <span class="caruselImgText2 carouselWhiteYText" id="textTwo"><strong>OFF ROAD?</strong>
+                                </span>
+                                <p class="caruselImgText3 carouselBlackText" id="textThry">18%</p>
+                                <p class="caruselImgText5 mx-auto carouselWhiteYText"> <span
+                                        class="caruselImgText4 carouselWhiteYText">OFF</span> <span
+                                        class="texthover"><button type="button" class="btnStyle weight700">SHOP
+                                            NOW</button></span> </p>
+                            </div>
+                            <img src="caruselImgAnimace-3.png" class="caruselImg col-6">
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- carusel for medium screen -->
+                <div id="carouselExampleIndicatorsmedium" class="carousel slide absolut " data-ride="carousel"
+                    style="margin-right: 14px; margin-left: -15px;">
+
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicatorsmedium" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicatorsmedium" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicatorsmedium" data-slide-to="2"></li>
+                    </ol>
+
+                    <div class="carousel-inner">
+
+                        <!-- first -->
+                        <div class="carousel-item active"
+                            style="background-image: url(caruselBack-1.jpg); height: 300px;">
+                            <div class="row">
+                                <div class="col-5 text-center">
+                                    <div class="marginTop+">
+                                        <span class="carouselBlackText caruselImg1Text1Small">TACKE CARE</span>
+                                        <span class="carouselBlackText caruselImg1Text2Small">OF YOUR TIRES </span>
+                                        <p class="carouselYellowText caruselImg1Text3Small">22%</p>
+                                        <p class="carouselBlackText caruselImg1Text4Small"> <span
+                                                class="testo">OFF</span>
+                                            <span class="texthover"><button type="button"
+                                                    class="carouselBlackText  smallBtnStyle"> <span
+                                                        class="caruselImg1Text5Small">SHOP NOW</span></button></span>
+                                        </p>
+                                    </div>
+
+                                </div>
+                                <img src="caruselImgAnimace-1.png " class="col-6 float-right caruselImg1Medium">
+                            </div>
+                        </div>
+
+                        <!-- second -->
+                        <div class="carousel-item" style="background-image: url(caruselBack-2.jpg); height: 300px;">
+                            <div class="row">
+                                <div class="col-5 text-center">
+                                    <div>
+                                        <span class="carouselWhiteYText caruselImg1Text1Small">READY FOR</span>
+                                        <span class="carouselWhiteYText caruselImg1Text2Small">OFF ROAD?</span>
+                                        <p class="carouselYellowText caruselImg1Text3Small">18%</p>
+                                        <p class="carouselWhiteYText caruselImg1Text4Small"> <span
+                                                class="testo">OFF</span>
+                                            <span class="texthover"><button type="button"
+                                                    class="carouselBlackText  smallBtnStyle"> <span
+                                                        class="caruselImg1Text5Small">SHOP NOW</span></button></span>
+                                        </p>
+                                    </div>
+
+                                </div>
+                                <img src="caruselImgAnimace-2.png " class="col-6 float-right caruselImg2Medium">
+                            </div>
+                        </div>
+
+                        <!-- third -->
+                        <div class="carousel-item" style="background-image: url(caruselBack-3.jpg); height: 300px;">
+                            <div class="row">
+                                <div class="col-5 text-center">
+                                    <div>
+                                        <span class="carouselWhiteYText caruselImg1Text1Small">TACKE CARE</span>
+                                        <span class="carouselWhiteYText caruselImg1Text2Small">OF YOUR TIRES </span>
+                                        <p class="carouselBlackText caruselImg1Text3Small">22%</p>
+                                        <p class="carouselWhiteYText caruselImg1Text4Small"> <span
+                                                class="testo">OFF</span>
+                                            <span class="texthover"><button type="button"
+                                                    class="carouselBlackText  smallBtnStyle"> <span
+                                                        class="caruselImg1Text5Small">SHOP NOW</span></button></span>
+                                        </p>
+                                    </div>
+
+                                </div>
+                                <img src="caruselImgAnimace-3.png " class="col-6 float-right caruselImg3Medium">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- carusel of small screen -->
+                <div id="carouselExampleIndicatorsSmall" class="carousel slide absolut" data-ride="carousel"
+                    style="margin-left: -6px; margin-right: 14px;">
+
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicatorsSmall" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicatorsSmall" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicatorsSmall" data-slide-to="2"></li>
+                    </ol>
+
+                    <div class="carousel-inner ">
+
+                        <!-- first -->
+                        <div class="carousel-item active"
+                            style="background-image: url(caruselBack-1.jpg); height: 200px;">
+                            <div class="row">
+                                <div class="col-5 text-center">
+                                    <div class="marginTop+">
+                                        <span class="carouselBlackText caruselImg1Text1Medium">TACKE CARE</span>
+                                        <span class="carouselBlackText caruselImg1Text1Medium">OF YOUR TIRES </span>
+                                        <p class="carouselYellowText caruselImg1Text1Medium">22%</p>
+                                        <p class="carouselBlackText caruselImg1Text1Medium"> <span
+                                                class="testo">OFF</span>
+                                            <span class="texthover"><button type="button"
+                                                    class="carouselBlackText  smallBtnStyle"> <span
+                                                        class="caruselImg2BTN">SHOP NOW</span></button></span>
+                                        </p>
+                                    </div>
+
+                                </div>
+                                <img src="caruselImgAnimace-1.png " class="col-6 float-right caruselImg1Medium">
+                            </div>
+                        </div>
+
+                        <!-- second -->
+                        <div class="carousel-item" style="background-image: url(caruselBack-2.jpg); height: 200px;">
+                            <div class="row">
+                                <div class="col-5 text-center">
+                                    <div>
+                                        <span class="carouselWhiteYText caruselImg1Text1Medium">READY FOR</span>
+                                        <span class="carouselWhiteYText caruselImg1Text1Medium">OFF ROAD?</span>
+                                        <p class="carouselYellowText caruselImg1Text1Medium">18%</p>
+                                        <p class="carouselWhiteYText caruselImg1Text1Medium"> <span
+                                                class="testo">OFF</span>
+                                            <span class="texthover"><button type="button"
+                                                    class="carouselBlackText  smallBtnStyle"> <span
+                                                        class="caruselImg2BTN">SHOP NOW</span></button></span>
+                                        </p>
+                                    </div>
+
+                                </div>
+                                <img src="caruselImgAnimace-2.png " class="col-6 float-right caruselImg2Medium">
+                            </div>
+                        </div>
+
+                        <!-- third -->
+                        <div class="carousel-item" style="background-image: url(caruselBack-3.jpg); height: 200px;">
+                            <div class="row">
+                                <div class="col-5 text-center">
+                                    <div>
+                                        <span class="carouselWhiteYText caruselImg1Text1Medium">TACKE CARE</span>
+                                        <span class="carouselWhiteYText caruselImg1Text1Medium">OF YOUR TIRES </span>
+                                        <p class="carouselBlackText caruselImg1Text1Medium">22%</p>
+                                        <p class="carouselWhiteYText caruselImg1Text1Medium"> <span
+                                                class="testo">OFF</span>
+                                            <span class="texthover"><button type="button"
+                                                    class="carouselBlackText  smallBtnStyle"> <span
+                                                        class="caruselImg2BTN">SHOP NOW</span></button></span>
+                                        </p>
+                                    </div>
+
+                                </div>
+                                <img src="caruselImgAnimace-3.png " class="col-6 float-right caruselImg3Medium">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ========================================================= -->
+
+            <!-- სამი სურათიანი ანიმაციის მეორე ნაწილი -->
+            <div class="col-lg-4 col-sm-12">
+                <!-- სამი ანიმაციის მეორე ნაწილის პირველი სურათი -->
+                <div class="col-row-md-6 col-sm-12 overflow  backYellow row">
+                    <div class="col-4">
+                        <span class="top-left">
+                            <p class="caruselPart2Text-1">GEAR</p>
+                            <p class="caruselPart2Text-2">ESSENTIALS</p> <br>
+                        </span>
+
+                        <span class="texthover bottom-left ">
+                            <button type="button" class="btnwhite weight700 inline">SHOP</button>
+                        </span>
+                    </div>
+
+                    <img src="caruselPart2-1.png" class="caruselImgPart2-1 caruselImg2Move col-8">
+                </div>
+
+                <!-- სამი ანიმაციის მეორე ნაწილის მეორე სურათი -->
+                <div class="col-row-md-6 col-sm-12 overflow backwhite row">
+                    <div class="col-4">
+                        <span class="top-left">
+                            <span class=" caruselPart22Text-1">BUY 4 GET 1</span> <br>
+                            <span class=" caruselPart22Text-2">FREE</span> <br>
+                        </span>
+
+                        <span class="texthover bottom-left">
+                            <button type="button" class="btnYellow weight700">SHOP</button>
+                        </span>
+                    </div>
+                    <img src="caruselPart2-2.png" class="caruselImgPart2-2 caruselImg2Move col-8">
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <br>
+
+    <!-- quick-view -->
+    <div class="mask"></div>
+
+    <!-- quick-view -->
+    <div id="quick-view-pop-up">
+        <div class="row">
+            <img src="2greed-3.jpg" alt="product" class=" col-lg-6">
+
+            <div class=" col-lg-6" style="padding-left: 30px;">
+                <p class="productTitle">
+                    BDK Massage Grip Car Steering Wheel Cover for Car SUV VAN – Two Tone Color, Odorless, Standard Size
+                    Fits 14.5-15.5
+                </p>
+
+                <p>
+                    <del class="lightGray ">$14.55</del> <span class="pay">$13.11</span>
+                </p>
+
+                <p class="productDescripshon">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                </p>
+
+                <p>
+                    <input type="number" id="productQuantity" name="productQuantity" placeholder="1" min="1" max="500">
+                    <span class="btnHover"><button class="yellowBtnStyle productBTN weight700">ADD TO
+                            CARD</button></span>
+                </p>
+
+                <span class="productsCaruselLinkHover"><a class="nav-link productDEscripshon2" href="#">🤍 add to
+                        wishlist</a></span>
+
+                <p class="productDEscripshon2">
+                    Categories: Air Filters, Service kits<br>
+                    Tags: K&N HP, Motorcraft, Royal Purple
+                </p>
+
+                <p>
+                    <a href="#" class="socmediaHover"><i
+                            class="fab fa-facebook fa-2x facebook animacion2 directional-transition"></i></a>
+                    <a href="#" class="socmediaHover"><i
+                            class="fab fa-twitter-square fa-2x twiter animacion2 directional-transition"></i></a>
+                    <a href="#" class="socmediaHover"><i
+                            class="fab fa-pinterest fa-2x pinterest animacion2 directional-transition"></i></a>
+                    <a href="#" class="socmediaHover"><i
+                            class="fab fa-linkedin fa-2x linkdin animacion2 directional-transition"></i></a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- products in greed sistem for BIG screen -->
+    <div id="productsCaruselBigScreen" class="carousel slide" data-ride="carousel">
+
+        <div class="col-md-12 text-center">
+            <p class="color h3"><strong>Popular products</strong></p>
+            <p class="text-muted h6">View a selection of our most popular products</p>
+        </div>
+
+        <div class="carousel-inner container">
+
+            <!-- first slide -->
+            <div class="carousel-item active">
+                <!-- 1 -->
+                <div class="row">
+
+                    <div class="col-3">
+                        <div class="card cardHeigth">
+
+                            <img class="card-img-top shop-item-img" src="productsCarusel-1.jpg" alt="product">
+                            <span class="QuickHover"><button class="btn-view Quick-View-btn">Quick View</button></span>
+
+                            <div class="card-body">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">Front Wheel Hub Bearing Assembly</a></h5>
+                                <p class="card-text"><span class="pay card-text-price">$99.55</span></p>
+
+                                <div class="padingTop5 btnHover">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700">ADD TO CART</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="card cardHeigth">
+
+                            <img class="card-img-top shop-item-img" src="productsCarusel-2.jpg" alt="product">
+                            <span class="QuickHover"><button class="btn-view Quick-View-btn">Quick View</button></span>
+
+                            <div class="card-body">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">Mobil 1 Extended Performance Oil</a></h5>
+                                <p class="card-text"><del class="lightGray">$14.55</del> <span
+                                        class="pay card-text-price">$13.11</span></p>
+
+                                <div class="padingTop5 btnHover">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700">ADD TO CART</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="card cardHeigth">
+
+                            <img class="card-img-top shop-item-img" src="productsCarusel-3.jpg" alt="product">
+                            <span class="QuickHover"><button class="btn-view Quick-View-btn">Quick View</button></span>
+
+                            <div class="card-body">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">Read more avbout BDK Massage Grip</a></h5>
+                                <p class="card-text"><span class="pay card-text-price">$177.75</span></p>
+
+                                <div class="padingTop5 btnHover">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="card cardHeigth">
+
+                            <img class="card-img-top shop-item-img" src="productsCarusel-4.jpg" alt="product">
+                            <span class="QuickHover"><button class="btn-view Quick-View-btn">Quick View</button></span>
+
+
+                            <div class="card-body">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">Read more avbout Front Wheel Hub </a></h5>
+                                <p class="card-text"><del class="lightGray">$271.78</del><span
+                                        class="pay card-text-price">$214.88</span></p>
+
+                                <div class="padingTop5 btnHover">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <br>
+
+                <!-- 2 -->
+                <div class="row">
+                    <div class="col-3">
+                        <div class="card cardHeigth">
+
+                            <img class="card-img-top shop-item-img" src="productsCarusel-5.jpg" alt="product">
+                            <span class="QuickHover"><button class="btn-view Quick-View-btn">Quick View</button></span>
+
+
+                            <div class="card-body">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">Front Wheel Hub Bearing Assembly</a></h5>
+                                <p class="card-text"><span class="pay card-text-price">$445.00</span></p>
+
+                                <div class="padingTop5 btnHover ">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="card cardHeigth">
+
+                            <img class="card-img-top shop-item-img" src="productsCarusel-6.jpg" alt="product">
+                            <span class="QuickHover"><button class="btn-view Quick-View-btn">Quick View</button></span>
+
+                            <div class="card-body">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">Mobil 1 Extended Performance Oil</a></h5>
+                                <p class="card-text"><del class="lightGray">$27.77</del> <span
+                                        class="pay card-text-price">$21.55</span>
+                                </p>
+
+                                <div class="padingTop5 btnHover">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="card cardHeigth">
+
+                            <img class="card-img-top shop-item-img" src="productsCarusel-7.jpg" alt="product">
+                            <span class="QuickHover"><button class="btn-view Quick-View-btn">Quick View</button></span>
+
+                            <div class="card-body">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">Mopar Oil Filter, #MO-409</a></h5>
+                                <p class="card-text"><span class="pay card-text-price">$45.77</span></p>
+
+                                <div class="padingTop5 btnHover">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="card cardHeigth">
+
+                            <img class="card-img-top shop-item-img" src="productsCarusel-8.jpg" alt="product">
+                            <span class="QuickHover"><button class="btn-view Quick-View-btn">Quick
+                                    View</button></span>
+
+
+                            <div class="card-body">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">BROCK Wheel Hub Bearing</a></h5>
+                                <p class="card-text"><span class="pay card-text-price">$135.55</span></p>
+
+                                <div class="padingTop5 btnHover">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- second slide -->
+            <div class="carousel-item">
+                <!-- 1 -->
+                <div class="row">
+                    <div class="col-3">
+                        <div class="card cardHeigth">
+
+                            <img class="card-img-top shop-item-img" src="productsCarusel-9.jpg" alt="product">
+                            <span class="QuickHover"><button class="btn-view Quick-View-btn">Quick View</button></span>
+
+
+                            <div class="card-body">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">Front Wheel Hub Bearing Assembly</a></h5>
+                                <p class="card-text"><del class="lightGray">$179.77</del><span
+                                        class="pay card-text-price">$144.00</span></p>
+
+                                <div class="padingTop5 btnHover ">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="card cardHeigth">
+
+                            <img class="card-img-top shop-item-img" src="productsCarusel-10.jpg" alt="product">
+                            <span class="QuickHover"><button class="btn-view Quick-View-btn">Quick
+                                    View</button></span>
+
+
+                            <div class="card-body">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">Hiltex Bearing Race & Seal Driver Master</a></h5>
+                                <p class="card-text"><span class="pay card-text-price">$74.55</span></p>
+
+                                <div class="padingTop5 btnHover">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="card cardHeigth">
+
+                            <img class="card-img-top shop-item-img" src="productsCarusel-11.jpg" alt="product">
+                            <span class="QuickHover"><button class="btn-view Quick-View-btn">Quick
+                                    View</button></span>
+
+
+                            <div class="card-body">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">Pair of Rear Wheel Hub Bearings</a></h5>
+                                <p class="card-text"><del class="lightGray">$151.00</del><span
+                                        class="pay card-text-price">$123.00</span></p>
+
+                                <div class="padingTop5 btnHover">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="card cardHeigth">
+
+                            <img class="card-img-top shop-item-img" src="productsCarusel-12.jpg" alt="product">
+                            <span class="QuickHover"><button class="btn-view Quick-View-btn">Quick
+                                    View</button></span>
+
+
+                            <div class="card-body">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">FRAM Ultra Synthetic Oil Filter</a></h5>
+                                <p class="card-text"><del class="lightGray">$14.55</del><span
+                                        class="pay card-text-price">$13.55</span>
+                                </p>
+
+                                <div class="padingTop5 btnHover">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+
+                <!-- 2 -->
+                <div class="row">
+                    <div class="col-3">
+                        <div class="card cardHeigth">
+
+                            <img class="card-img-top shop-item-img" src="productsCarusel-13.jpg" alt="product">
+                            <span class="QuickHover"><button class="btn-view Quick-View-btn">Quick
+                                    View</button></span>
+
+
+                            <div class="card-body">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">Castrol EDGE 0W-40 A3B4 Advanced Full</a></h5>
+                                <p class="card-text"><span class="pay card-text-price">$33.55</span></p>
+
+                                <div class="padingTop5 btnHover ">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="card cardHeigth">
+
+                            <img class="card-img-top shop-item-img" src="productsCarusel-14.jpg" alt="product">
+                            <span class="QuickHover"><button class="btn-view Quick-View-btn">Quick
+                                    View</button></span>
+
+
+                            <div class="card-body">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">TKOOFN 3Pcs Warm Soft Plush Wool</a></h5>
+                                <p class="card-text"><del class="lightGray">$210.75</del> <span
+                                        class="pay card-text-price">$183.44</span></p>
+
+                                <div class="padingTop5 btnHover">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="card cardHeigth">
+
+                            <img class="card-img-top shop-item-img" src="productsCarusel-15.jpg" alt="product">
+                            <span class="QuickHover"><button class="btn-view Quick-View-btn">Quick
+                                    View</button></span>
+
+
+                            <div class="card-body">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">Mopar Oil Filter, #MO-409</a></h5>
+                                <p class="card-text"><span class="pay card-text-price">$45.77</span></p>
+
+                                <div class="padingTop5 btnHover">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="card cardHeigth">
+
+                            <img class="card-img-top shop-item-img" src="productsCarusel-16.jpg" alt="product">
+                            <span class="QuickHover"><button class="btn-view Quick-View-btn">Quick
+                                    View</button></span>
+
+
+                            <div class="card-body">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">For 04-08 Ford F150 11th Gen Chrome </a></h5>
+                                <p class="card-text"><del class="lightGray">$210.75</del><span
+                                        class="pay card-text-price">$183.44</span></p>
+
+                                <div class="padingTop5 btnHover">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <a class="carousel-control-prev carouselControlerHover" href="#productsCaruselBigScreen" role="button"
+            data-slide="prev">
+            <span aria-hidden="true"><i class="fas fa-chevron-left paralaxCarouselControlerRight"></i></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next carouselControlerHover" href="#productsCaruselBigScreen" role="button"
+            data-slide="next">
+            <span aria-hidden="true"><i class="fas fa-chevron-right paralaxCarouselControlerRight"></i></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+
+    <!-- HIDDEN products in greed sistem for MEDIUM screen  -->
+    <div id="productsCaruselMediumScreen" class="carousel slide absolut" data-ride="carousel">
+
+        <div class="col-md-12 text-center">
+            <p class="color h3"><strong>Popular products</strong></p>
+            <p class="text-muted h6">View a selection of our most popular products</p>
+        </div>
+
+        <div class="carousel-inner container">
+
+            <!-- first slide -->
+            <div class="carousel-item active">
+                <!-- 1 -->
+                <div class="row">
+
+                    <div class="col-4">
+                        <div class="card cardHeigthMedium">
+
+                            <img class="card-img-top shop-item-img" src="productsCarusel-1.jpg" alt="product">
+                            <span class="QuickHover"><button class="btn-view Quick-View-btn">Quick
+                                    View</button></span>
+
+                            <div class="card-body">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">Front Wheel Hub Bearing Assembly</a></h5>
+                                <p class="card-text"><span class="pay card-text-price">$99.55</span></p>
+
+                                <div class="padingTop5 btnHover ">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="card cardHeigthMedium">
+
+                            <img class="card-img-top shop-item-img" src="productsCarusel-2.jpg" alt="product">
+                            <span class="QuickHover"><button class="btn-view Quick-View-btn">Quick
+                                    View</button></span>
+
+
+                            <div class="card-body">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">Mobil 1 Extended Performance Oil</a></h5>
+                                <p class="card-text"><del class="lightGray">$14.55</del> <span
+                                        class="pay card-text-price">$13.11</span>
+                                </p>
+
+                                <div class="padingTop5 btnHover">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="card cardHeigthMedium">
+
+                            <img class="card-img-top shop-item-img" src="productsCarusel-3.jpg" alt="product">
+                            <span class="QuickHover"><button class="btn-view Quick-View-btn">Quick
+                                    View</button></span>
+
+                            <div class="card-body">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">Read more avbout BDK Massage Grip</a></h5>
+                                <p class="card-text"><span class="pay card-text-price">$177.75</span></p>
+
+                                <div class="padingTop5 btnHover">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <br>
+
+                <!-- 2 -->
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card cardHeigthMedium">
+
+                            <img class="card-img-top shop-item-img" src="productsCarusel-5.jpg" alt="product">
+                            <span class="QuickHover"><button class="btn-view Quick-View-btn">Quick
+                                    View</button></span>
+
+                            <div class="card-body">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">Front Wheel Hub Bearing Assembly</a></h5>
+                                <p class="card-text"><span class="pay card-text-price">$445.00</span></p>
+
+                                <div class="padingTop5 btnHover ">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="card cardHeigthMedium">
+
+                            <img class="card-img-top shop-item-img" src="productsCarusel-6.jpg" alt="product">
+                            <span class="QuickHover"><button class="btn-view Quick-View-btn">Quick
+                                    View</button></span>
+
+                            <div class="card-body">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">Mobil 1 Extended Performance Oil</a></h5>
+                                <p class="card-text"><del class="lightGray">$27.77</del> <span
+                                        class="pay card-text-price">$21.55</span>
+                                </p>
+
+                                <div class="padingTop5 btnHover">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="card cardHeigthMedium">
+
+                            <img class="card-img-top shop-item-img" src="productsCarusel-7.jpg" alt="product">
+                            <span class="QuickHover"><button class="btn-view Quick-View-btn">Quick
+                                    View</button></span>
+
+                            <div class="card-body">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">Mopar Oil Filter, #MO-409</a></h5>
+                                <p class="card-text"><span class="pay card-text-price">$45.77</span></p>
+
+                                <div class="padingTop5 btnHover">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- second slide -->
+            <div class="carousel-item">
+
+                <!-- 1 -->
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card cardHeigthMedium">
+
+                            <img class="card-img-top shop-item-img" src="productsCarusel-9.jpg" alt="product">
+                            <span class="QuickHover"><button class="btn-view Quick-View-btn">Quick
+                                    View</button></span>
+
+                            <div class="card-body">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">Front Wheel Hub Bearing Assembly</a></h5>
+                                <p class="card-text"><del class="lightGray">$179.77</del><span
+                                        class="pay card-text-price">$144.00</span></p>
+
+                                <div class="padingTop5 btnHover ">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="card cardHeigthMedium">
+
+                            <img class="card-img-top shop-item-img" src="productsCarusel-10.jpg" alt="product">
+                            <span class="QuickHover"><button class="btn-view Quick-View-btn">Quick
+                                    View</button></span>
+
+                            <div class="card-body">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">Hiltex Bearing Race & Seal Driver Master</a></h5>
+                                <p class="card-text"><span class="pay card-text-price">$74.55</span></p>
+
+                                <div class="padingTop5 btnHover">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="card cardHeigthMedium">
+
+                            <img class="card-img-top shop-item-img" src="productsCarusel-11.jpg" alt="product">
+                            <span class="QuickHover"><button class="btn-view Quick-View-btn">Quick
+                                    View</button></span>
+
+                            <div class="card-body">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">Pair of Rear Wheel Hub Bearings</a></h5>
+                                <p class="card-text"><del class="lightGray">$151.00</del><span
+                                        class="pay card-text-price">$123.00</span></p>
+
+                                <div class="padingTop5 btnHover">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <br>
+
+                <!-- 2 -->
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card cardHeigthMedium">
+
+                            <img class="card-img-top shop-item-img" src="productsCarusel-13.jpg" alt="product">
+                            <span class="QuickHover"><button class="btn-view Quick-View-btn">Quick
+                                    View</button></span>
+
+                            <div class="card-body">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">Castrol EDGE 0W-40 A3B4 Advanced Full</a></h5>
+                                <p class="card-text"><span class="pay card-text-price">$33.55</span></p>
+
+                                <div class="padingTop5 btnHover ">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="card cardHeigthMedium">
+
+                            <img class="card-img-top shop-item-img" src="productsCarusel-14.jpg" alt="product">
+                            <span class="QuickHover"><button class="btn-view Quick-View-btn">Quick
+                                    View</button></span>
+
+                            <div class="card-body">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">TKOOFN 3Pcs Warm Soft Plush Wool</a></h5>
+                                <p class="card-text"><del class="lightGray">$210.75</del> <span
+                                        class="pay card-text-price">$183.44</span></p>
+
+                                <div class="padingTop5 btnHover">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="card cardHeigthMedium">
+
+                            <img class="card-img-top shop-item-img" src="productsCarusel-15.jpg" alt="product">
+                            <span class="QuickHover"><button class="btn-view Quick-View-btn">Quick
+                                    View</button></span>
+
+                            <div class="card-body">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">Mopar Oil Filter, #MO-409</a></h5>
+                                <p class="card-text"><span class="pay card-text-price">$45.77</span></p>
+
+                                <div class="padingTop5 btnHover">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- third slide -->
+            <div class="carousel-item">
+
+                <!-- 1 -->
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card cardHeigthMedium">
+
+                            <img class="card-img-top shop-item-img" src="productsCarusel-4.jpg" alt="product">
+                            <span class="QuickHover"><button class="btn-view Quick-View-btn">Quick
+                                    View</button></span>
+
+
+                            <div class="card-body">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">Read more avbout Front Wheel Hub </a></h5>
+                                <p class="card-text"><del class="lightGray">$271.78</del><span
+                                        class="pay card-text-price">$214.88</span></p>
+
+                                <div class="padingTop5 btnHover">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="card cardHeigthMedium">
+
+                            <img class="card-img-top shop-item-img" src="productsCarusel-8.jpg" alt="product">
+                            <span class="QuickHover"><button class="btn-view Quick-View-btn">Quick
+                                    View</button></span>
+
+                            <div class="card-body">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">BROCK Wheel Hub Bearing</a></h5>
+                                <p class="card-text"><span class="pay card-text-price">$135.55</span></p>
+
+                                <div class="padingTop5 btnHover">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-4">
+                        <div class="card cardHeigthMedium">
+
+                            <img class="card-img-top shop-item-img" src="productsCarusel-12.jpg" alt="product">
+                            <span class="QuickHover"><button class="btn-view Quick-View-btn">Quick
+                                    View</button></span>
+
+                            <div class="card-body">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">FRAM Ultra Synthetic Oil Filter</a></h5>
+                                <p class="card-text"><del class="lightGray">$14.55</del><span
+                                        class="pay card-text-price">$13.55</span>
+                                </p>
+
+                                <div class="padingTop5 btnHover">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card cardHeigthMedium">
+
+                            <img class="card-img-top shop-item-img" src="productsCarusel-16.jpg" alt="product">
+                            <span class="QuickHover"><button class="btn-view Quick-View-btn">Quick
+                                    View</button></span>
+
+                            <div class="card-body">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">For 04-08 Ford F150 11th Gen Chrome </a></h5>
+                                <p class="card-text"><del class="lightGray">$210.75</del><span
+                                        class="pay card-text-price">$183.44</span></p>
+
+                                <div class="padingTop5 btnHover">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="card cardHeigthMedium">
+
+                            <img class="card-img-top shop-item-img" src="productsCarusel-3.jpg" alt="product">
+                            <span class="QuickHover"><button class="btn-view Quick-View-btn">Quick
+                                    View</button></span>
+
+                            <div class="card-body">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">Read more avbout BDK Massage Grip</a></h5>
+                                <p class="card-text"><span class="pay card-text-price">$177.75</span></p>
+
+                                <div class="padingTop5 btnHover">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="card cardHeigthMedium">
+
+                            <img class="card-img-top shop-item-img" src="productsCarusel-13.jpg" alt="product">
+                            <span class="QuickHover"><button class="btn-view Quick-View-btn">Quick
+                                    View</button></span>
+
+                            <div class="card-body">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">Castrol EDGE 0W-40 A3B4 Advanced Full</a></h5>
+                                <p class="card-text"><span class="pay card-text-price">$33.55</span></p>
+
+                                <div class="padingTop5 btnHover ">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <a class="carousel-control-prev carouselControlerHover" href="#productsCaruselMediumScreen" role="button"
+            data-slide="prev">
+            <span aria-hidden="true"><i class="fas fa-chevron-left paralaxCarouselControlerRight"></i></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next carouselControlerHover" href="#productsCaruselMediumScreen" role="button"
+            data-slide="next">
+            <span aria-hidden="true"><i class="fas fa-chevron-right paralaxCarouselControlerRight"></i></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+
+    <!-- HIDDEN products in greed sistem for SMALL screen  -->
+    <div id="productsCaruselSmallScreen" class="carousel slide absolut" data-ride="carousel">
+
+        <div class="col-md-12 text-center">
+            <p class="color h3"><strong>Popular products</strong></p>
+            <p class="text-muted h6">View a selection of our most popular products</p>
+        </div>
+
+        <div class="container">
+
+            <div class="carousel-inner">
+                <!-- 1 -->
+                <div class="carousel-item active">
+
+                    <div class="card">
+                        <div class="row">
+                            <img class="card-img-top col-6 productCardImg shop-item-img" src="productsCarusel-1.jpg"
+                                alt="product">
+                            <div class="card-body col-6">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">Front Wheel Hub Bearing Assembly</a></h5>
+                                <p class="card-text"><span class="pay card-text-price">$99.55</span></p>
+
+                                <div class="padingTop5 btnHover ">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="card">
+                        <div class="row">
+                            <img class="card-img-top col-6 productCardImg shop-item-img" src="productsCarusel-2.jpg"
+                                alt="product">
+                            <div class="card-body col-6">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">Mobil 1 Extended Performance Oil</a></h5>
+                                <p class="card-text"><del class="lightGray">$14.55</del> <span
+                                        class="pay card-text-price">$13.11</span>
+                                </p>
+
+                                <div class="padingTop5 btnHover">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!-- 2 -->
+                <div class="carousel-item">
+
+                    <div class="card">
+                        <div class="row">
+                            <img class="card-img-top col-6 productCardImg shop-item-img" src="productsCarusel-3.jpg"
+                                alt="product">
+                            <div class="card-body col-6">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">Read more avbout BDK Massage Grip</a></h5>
+                                <p class="card-text"><span class="pay card-text-price">$177.75</span></p>
+
+                                <div class="padingTop5 btnHover">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="row">
+                            <img class="card-img-top productCardImg col-6 shop-item-img" src="productsCarusel-4.jpg"
+                                alt="product">
+                            <div class="card-body col-6">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">Read more avbout Front Wheel Hub </a></h5>
+                                <p class="card-text"><del class="lightGray">$271.78</del><span
+                                        class="pay card-text-price">$214.88</span></p>
+
+                                <div class="padingTop5 btnHover">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 3 -->
+                <div class="carousel-item">
+
+                    <div class="card ">
+                        <div class="row">
+                            <img class="card-img-top col-6 productCardImg shop-item-img" src="productsCarusel-5.jpg"
+                                alt="product">
+                            <div class="card-body col-6">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">Front Wheel Hub Bearing Assembly</a></h5>
+                                <p class="card-text"><span class="pay">$445.00</span></p>
+
+                                <div class="padingTop5 btnHover ">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="card">
+                        <div class="row">
+                            <img class="card-img-top col-6 productCardImg shop-item-img" src="productsCarusel-6.jpg"
+                                alt="product">
+                            <div class="card-body col-6">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">Mobil 1 Extended Performance Oil</a></h5>
+                                <p class="card-text"><del class="lightGray">$27.77</del> <span class="pay">$21.55</span>
+                                </p>
+
+                                <div class="padingTop5 btnHover">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 4 -->
+                <div class="carousel-item">
+
+                    <div class="card ">
+                        <div class="row">
+                            <img class="card-img-top productCardImg col-6 shop-item-img" src="productsCarusel-7.jpg"
+                                alt="product">
+                            <div class="card-body col-6">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">Mopar Oil Filter, #MO-409</a></h5>
+                                <p class="card-text"><span class="pay">$45.77</span></p>
+
+                                <div class="padingTop5 btnHover">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card ">
+                        <div class="row">
+                            <img class="card-img-top productCardImg col-6 shop-item-img" src="productsCarusel-8.jpg"
+                                alt="product">
+                            <div class="card-body col-6">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">BROCK Wheel Hub Bearing</a></h5>
+                                <p class="card-text"><span class="pay">$135.55</span></p>
+
+                                <div class="padingTop5 btnHover">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 5 -->
+                <div class="carousel-item">
+
+                    <div class="card ">
+                        <div class="row">
+                            <img class="card-img-top productCardImg col-6 shop-item-img" src="productsCarusel-9.jpg"
+                                alt="product">
+                            <div class="card-body col-6">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">Front Wheel Hub Bearing Assembly</a></h5>
+                                <p class="card-text"><del class="lightGray">$179.77</del><span
+                                        class="pay">$144.00</span></p>
+
+                                <div class="padingTop5 btnHover ">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="card ">
+                        <div class="row">
+                            <img class="card-img-top productCardImg col-6 shop-item-img" src="productsCarusel-10.jpg"
+                                alt="product">
+                            <div class="card-body col-6">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">Hiltex Bearing Race & Seal Driver Master</a></h5>
+                                <p class="card-text"><span class="pay">$74.55</span></p>
+
+                                <div class="padingTop5 btnHover">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6 -->
+                <div class="carousel-item">
+
+
+                    <div class="card">
+                        <div class="row">
+                            <img class="card-img-top productCardImg col-6 shop-item-img" src="productsCarusel-11.jpg"
+                                alt="product">
+                            <div class="card-body col-6">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">Pair of Rear Wheel Hub Bearings</a></h5>
+                                <p class="card-text"><del class="lightGray">$151.00</del><span
+                                        class="pay">$123.00</span></p>
+
+                                <div class="padingTop5 btnHover">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <div class="row">
+                            <img class="card-img-top productCardImg col-6 shop-item-img" src="productsCarusel-12.jpg"
+                                alt="product">
+                            <div class="card-body col-6">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">FRAM Ultra Synthetic Oil Filter</a></h5>
+                                <p class="card-text"><del class="lightGray">$14.55</del><span class="pay">$13.55</span>
+                                </p>
+
+                                <div class="padingTop5 btnHover">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- 7 -->
+                <div class="carousel-item">
+
+                    <div class="card ">
+                        <div class="row">
+                            <img class="card-img-top productCardImg col-6 shop-item-img" src="productsCarusel-13.jpg"
+                                alt="product">
+                            <div class="card-body col-6">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">Castrol EDGE 0W-40 A3B4 Advanced Full</a></h5>
+                                <p class="card-text"><span class="pay">$33.55</span></p>
+
+                                <div class="padingTop5 btnHover ">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="card">
+                        <div class="row">
+                            <img class="card-img-top productCardImg col-6 shop-item-img" src="productsCarusel-14.jpg"
+                                alt="product">
+                            <div class="card-body  col-6">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">TKOOFN 3Pcs Warm Soft Plush Wool</a></h5>
+                                <p class="card-text"><del class="lightGray">$210.75</del> <span
+                                        class="pay">$183.44</span></p>
+
+                                <div class="padingTop5 btnHover">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 8 -->
+                <div class="carousel-item">
+
+
+                    <div class="card">
+                        <div class="row">
+                            <img class="card-img-top productCardImg col-6 shop-item-img" src="productsCarusel-15.jpg"
+                                alt="product">
+                            <div class="card-body col-6">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">Mopar Oil Filter, #MO-409</a></h5>
+                                <p class="card-text"><span class="pay">$45.77</span></p>
+
+                                <div class="padingTop5 btnHover">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="card">
+                        <div class="row">
+                            <img class="card-img-top productCardImg col-6 shop-item-img" src="productsCarusel-16.jpg"
+                                alt="product">
+                            <div class="card-body col-6">
+                                <h5 class="card-title productsCaruselLinkHover"><a href="product.html"
+                                        class="productsCaruselLink">For 04-08 Ford F150 11th Gen Chrome </a></h5>
+                                <p class="card-text"><del class="lightGray">$210.75</del><span
+                                        class="pay">$183.44</span></p>
+
+                                <div class="padingTop5 btnHover">
+                                    <button class=" text-center backYellowBtn btnBottom addToCart"> <span
+                                            class="weight700 ">ADD TO CART</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <a class="carousel-control-prev carouselControlerHover" href="#productsCaruselSmallScreen" role="button"
+            data-slide="prev">
+            <span aria-hidden="true"><i class="fas fa-chevron-left paralaxCarouselControlerRight"></i></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next carouselControlerHover" href="#productsCaruselSmallScreen" role="button"
+            data-slide="next">
+            <span aria-hidden="true"><i class="fas fa-chevron-right paralaxCarouselControlerRight"></i></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <br>
+
+    <!-- იკონები -->
+    <div class="container">
+
+        <div class="col-md-12 text-center">
+            <p class="color h3"><strong>parts for your car</strong></p>
+            <p class="text-muted h6">View a selection of our most popular car parts</p>
+        </div>
+
+        <br>
+
+        <!-- პირველი სამი იკონა -->
+        <div class="row" id="firstIcons">
+            <div class="col-lg-4 row">
+                <div class="col-3"><i class="fas fa-truck fa-3x color"></i></div>
+
+                <div class="col-8">
+                    <p class="iconstextTiTle">In-Store Pickup</p>
+                    <p class="iconsText">Buy your parts online and pick them up in-store in 30 minutes</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 row">
+                <div class="col-3"><i class="fas fa-pallet fa-3x color"></i></div>
+
+                <div class="col-8">
+                    <p class="iconstextTiTle">Free Shipping Over $25</p>
+                    <p class="iconsText">Receive free standard shipping on orders over $25 (US only).</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 row">
+                <div class="col-3"><i class="fas fa-percent color fa-3x"></i></div>
+
+                <div class="col-8">
+                    <p class="iconstextTiTle">Speed Perks</p>
+                    <p class="iconsText">Spend $30, get $5 or spend $100, get $20 off your next purchase.</p>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- მეორე სამი იკონა -->
+        <div class="row" id="firstIcons1">
+            <div class="col-lg-4 row">
+
+                <div class="col-3"><i class="fas fa-map-marked-alt fa-3x color"></i></div>
+
+                <div class="col-8">
+                    <span class="weight700 h5">Store Locator</span> <br>
+                    Use our store locator to find the closest store near you
+                </div>
+            </div>
+
+            <div class="col-lg-4 row" id="firstIcons1OIL">
+
+                <div class="col-3"><i class="fas fa-recycle color fa-3x"></i></div>
+
+                <div class="col-8">
+                    <p class="iconstextTiTle">Oil & Battery Recycling</p>
+                    <p class="iconsText">Recycle motor oil and gear oil at no charge. Gift card for returning</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 row">
+
+                <div class="col-3"><i class="fas fa-map-marked-alt fa-3x color"></i></div>
+
+                <div class="col-8">
+                    <p class="iconstextTiTle">Store Locator</p>
+                    <p class="iconsText">Use our store locator to find the closest store near you.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <br>
+
+    <!-- პირველი paralax სურათი -->
+    <div class="parallax">
+
+        <!-- პარალაქსის სლაიდი -->
+        <div id="ParalaxcarouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+
+                <div class="container">
+                    <!-- first -->
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-lg-1"></div>
+                            <div class="col-lg-5 h3 paralaxTextPadding paralaxCaruselText">
+                                <span class="h5 white">from <span class="color">540$</span></span><br>
+                                <span class="paralaxImgText-2">BREAK DISKS & PADS </span><br>
+                                <span class="paralaxImgText-3">MEGA SALE</span> <br><br>
+                                <P class="hoverWhite"><button class="yellowBtnStyle whitehoverbtn weight700">SHOP
+                                        NOW</button></P>
+                            </div>
+                            <br><br><br>
+                            <div class="col-lg-6 text-center paralaxImgPaddimg"><img class="d-block paralaxImg"
+                                    src="paralaxCarusel-1.png" alt="First slide"></div>
+                        </div>
+                    </div>
+
+                    <!-- second -->
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-lg-5 h3 paralaxTextPadding paralaxCaruselText">
+                                <span class="h5 white">from <span class="color">540$</span></span><br>
+                                <span class="paralaxImgText-2">LAMPS AND LIGHTS</span><br>
+                                <span class="paralaxImgText-3">MEGA SALE</span> <br><br>
+                                <P class="hoverWhite"><button class="yellowBtnStyle whitehoverbtn weight700">SHOP
+                                        NOW</button></P>
+                            </div>
+
+                            <div class="col-lg-1"></div>
+
+                            <div class="col-lg-6 text-center paralaxImgPaddimg"><img class="d-block paralaxImg"
+                                    src="paralaxCarusel-2.png" alt="First slide"></div>
+
+                        </div>
+                    </div>
+
+                    <!-- third -->
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-1"></div>
+                            <div class="col-lg-5 h3 paralaxTextPadding paralaxCaruselText">
+                                <span class="h5 white">from <span class="color">540$</span></span><br>
+                                <span class="paralaxImgText-2">WHEEL DISCS</span><br>
+                                <span class="paralaxImgText-3">MEGA SALE</span> <br><br>
+                                <P class="hoverWhite"><button class="yellowBtnStyle whitehoverbtn weight700">SHOP
+                                        NOW</button></P>
+                            </div>
+                            <br><br><br>
+                            <div class="col-lg-6 text-center paralaxImgPaddimg"><img class="d-block paralaxImg2"
+                                    src="paralaxCarusel-3.png" alt="First slide"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <a class="carousel-control-prev carouselControlerHover" href="#ParalaxcarouselExampleControls" role="button"
+                data-slide="prev">
+                <span aria-hidden="true"><i class="fas fa-chevron-left paralaxCarouselControlerRight"></i></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next carouselControlerHover" href="#ParalaxcarouselExampleControls" role="button"
+                data-slide="next">
+                <span aria-hidden="true"><i class="fas fa-chevron-right paralaxCarouselControlerRight"></i></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <br><br>
+
+    <!-- quick-view -->
+    <div class="mask2"></div>
+
+    <!-- quick-view -->
+    <div id="quick-view-pop-up2">
+        <div class="row">
+            <img src="2greed-3.jpg" alt="product" class=" col-lg-6">
+
+            <div class=" col-lg-6" style="padding-left: 30px;">
+                <p class="productTitle">
+                    BDK Massage Grip Car Steering Wheel Cover for Car SUV VAN – Two Tone Color, Odorless, Standard Size
+                    Fits 14.5-15.5
+                </p>
+
+                <p>
+                    <del class="lightGray ">$14.55</del> <span class="pay">$13.11</span>
+                </p>
+
+                <p class="productDescripshon">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                </p>
+
+                <p>
+                    <input type="number" id="productQuantity" name="productQuantity" placeholder="1" min="1" max="500">
+                    <span class="btnHover"><button class="yellowBtnStyle productBTN weight700">ADD TO
+                            CARD</button></span>
+                </p>
+
+                <span class="productsCaruselLinkHover"><a class="nav-link productDEscripshon2" href="#">🤍 add to
+                        wishlist</a></span>
+
+                <p class="productDEscripshon2">
+                    Categories: Air Filters, Service kits<br>
+                    Tags: K&N HP, Motorcraft, Royal Purple
+                </p>
+
+                <p>
+                    <a href="#" class="socmediaHover"><i
+                            class="fab fa-facebook fa-2x facebook animacion2 directional-transition"></i></a>
+                    <a href="#" class="socmediaHover"><i
+                            class="fab fa-twitter-square fa-2x twiter animacion2 directional-transition"></i></a>
+                    <a href="#" class="socmediaHover"><i
+                            class="fab fa-pinterest fa-2x pinterest animacion2 directional-transition"></i></a>
+                    <a href="#" class="socmediaHover"><i
+                            class="fab fa-linkedin fa-2x linkdin animacion2 directional-transition"></i></a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ორი გრიდის სტრუქტურა -->
+    <div class="container">
+
+        <div class="col-md-12 text-center">
+            <p class="salePartsTitle"><strong>Tax-Savings Parts</strong></p>
+            <p class="salePartsText">Do More With Your Tax Refund</p>
+        </div>
+
+
+        <br>
+
+        <!-- პირველი ორი გრიდი -->
+        <div class="row">
+
+            <div class="col-lg-6 hiddenHeigth200">
+                <div class="card ">
+                    <div class="row bottomPadding">
+
+                        <div class="col-5 shop-item-img2" style="position: relative;">
+                            <img class="cardImg cardImgAfter border-right shop-item-img22" src="2greed-1.jpg"
+                                alt="greed img">
+                            <span class="QuickHover"><button class="btn-view2 Quick-View-btn2">Quick View</button></span>
+                        </div>
+
+                        <div class="col-7">
+                            <div class="card-body">
+                                <div>
+                                    <p class="twoGreedTitle productsCaruselLinkHover " id="twoGreedText-1">
+                                        <a href="product.html" class="productsCaruselLink ">Castrol GTX ULTRACLEAN 5W-30
+                                            Motor
+                                            Oil, 5 QT</a>
+                                    </p>
+                                    <p class="twoGreedTitle absolut shop-item-title2" id="twoGreedText-2"><span
+                                            class="twoGreedTitle">Castrol GTX</span> </p>
+                                    <p class="marginTop"><del class="lightGray">$351.99</del> <span
+                                            class="pay shop-item-price2">$88.15</span></p>
+                                </div>
+
+                                <div class="card-text col-12 cardBottom-left texthover" id="twoGreddBtnMargin">
+                                    <button class="yellowBtnStyle btn shopItem"><span class="FAQDropTitle">ADD TO
+                                            CARD</span></button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 hiddenHeigth200">
+
+                <div class="card ">
+                    <div class="row topPading bottomPadding">
+
+                        <div class="col-5 shop-item-img2" style="position: relative;">
+                            <img class="cardImg cardImgAfter border-right shop-item-img22" src="2greed-2.jpg"
+                                alt="greed img">
+                            <span class="QuickHover"><button class="btn-view2 Quick-View-btn2">Quick View</button></span>
+                        </div>
+
+                        <div class="col-7">
+                            <div class="card-body">
+                                <div>
+                                    <p class="twoGreedTitle productsCaruselLinkHover" id="twoGreedText-1">
+                                        <a href="product.html" class="productsCaruselLink">Castrol GTX ULTRACLEAN 5W-30
+                                            Motor
+                                            Oil, 5 QT</a>
+                                    </p>
+                                    <p class="twoGreedTitle absolut shop-item-title2" id="twoGreedText-2"><span
+                                            class="twoGreedTitle">Castrol GTX</span> </p>
+                                    <p class="marginTop "><del class="lightGray">$351.99</del> <span
+                                            class="pay shop-item-price2">$88.15</span></p>
+                                </div>
+                                <p class="card-text col-12 cardBottom-left texthover" id="twoGreddBtnMargin">
+                                    <button class="yellowBtnStyle btn shopItem"><span class="FAQDropTitle">ADD TO
+                                            CARD</span></button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <br>
+
+        <!-- მეორე ორი გრიდი -->
+        <div class="row">
+            <div class="col-lg-6 hiddenHeigth200">
+
+                <div class="card md-3">
+                    <div class="row topPading bottomPadding">
+
+                        <div class="col-5 shop-item-img2" style="position: relative;">
+                            <img class="cardImg cardImgAfter border-right shop-item-img22" src="2greed-3.jpg"
+                                alt="greed img">
+                            <span class="QuickHover"><button class="btn-view2 Quick-View-btn2">Quick View</button></span>
+                        </div>
+
+                        <div class="col-7">
+                            <div class="card-body">
+                                <div>
+                                    <p class="twoGreedTitle productsCaruselLinkHover" id="twoGreedText-1">
+                                        <a href="product.html" class="productsCaruselLink">Castrol GTX ULTRACLEAN 5W-30
+                                            Motor
+                                            Oil, 5 QT</a>
+                                    </p>
+                                    <p class="twoGreedTitle absolut shop-item-title2" id="twoGreedText-2"><span
+                                            class="twoGreedTitle">Castrol GTX</span> </p>
+                                    <p class="marginTop "><del class="lightGray">$351.99</del> <span
+                                            class="pay shop-item-price2">$88.15</span></p>
+                                </div>
+                                <p class="card-text col-12 cardBottom-left texthover" id="twoGreddBtnMargin">
+                                    <button class="yellowBtnStyle btn shopItem"><span class="FAQDropTitle">ADD TO
+                                            CARD</span></button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-6 hiddenHeigth200">
+
+                <div class="card mb-3">
+                    <div class="row topPading bottomPadding">
+
+                        <div class="col-5 shop-item-img2" style="position: relative;">
+                            <img src="2greed-4.jpg" alt="greed img"
+                                class="cardImg cardImgAfter border-right shop-item-img22">
+                            <span class="QuickHover"><button class="btn-view2 Quick-View-btn2">Quick View</button></span>
+                        </div>
+
+
+                        <div class="col-7">
+                            <div class="card-body">
+                                <div>
+                                    <p class="twoGreedTitle productsCaruselLinkHover" id="twoGreedText-1">
+                                        <a href="product.html" class="productsCaruselLink">Castrol GTX ULTRACLEAN 5W-30
+                                            Motor
+                                            Oil, 5 QT </a>
+                                    </p>
+                                    <p class="twoGreedTitle absolut shop-item-title2" id="twoGreedText-2"><span
+                                            class="twoGreedTitle">Castrol GTX</span> </p>
+                                    <p class="marginTop"><del class="lightGray">$351.99</del> <span
+                                            class="pay shop-item-price2">$88.15</span></p>
+                                </div>
+                                <p class="card-text col-12 cardBottom-left texthover" id="twoGreddBtnMargin">
+                                    <button class="yellowBtnStyle btn shopItem"><span class="FAQDropTitle">ADD TO
+                                            CARD</span></button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- მესამე ორი გრიდი -->
+        <div class="row">
+            <div class="col-lg-6 hiddenHeigth200">
+
+                <div class="card mb-3">
+                    <div class="row topPading bottomPadding">
+
+                        <div class="col-5 shop-item-img2" style="position: relative;">
+                            <img src="2greed-5.jpg" alt="greed img"
+                                class="cardImg cardImgAfter border-right shop-item-img22">
+                            <span class="QuickHover"><button class="btn-view2 Quick-View-btn2">Quick View</button></span>
+                        </div>
+
+                        <div class="col-7">
+                            <div class="card-body">
+                                <div>
+                                    <p class="twoGreedTitle productsCaruselLinkHover" id="twoGreedText-1">
+                                        <a href="product.html" class="productsCaruselLink">Castrol GTX ULTRACLEAN 5W-30
+                                            Motor
+                                            Oil, 5 QT </a>
+                                    </p>
+                                    <p class="twoGreedTitle absolut shop-item-title2" id="twoGreedText-2"><span
+                                            class="twoGreedTitle">Castrol GTX</span> </p>
+                                    <p class="marginTop"><del class="lightGray">$351.99</del> <span
+                                            class="pay shop-item-price2">$88.15</span></p>
+                                </div>
+                                <p class="card-text col-12 cardBottom-left texthover" id="twoGreddBtnMargin">
+                                    <button class="yellowBtnStyle btn shopItem"><span class="FAQDropTitle">ADD TO
+                                            CARD</span></button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-6 hiddenHeigth200">
+
+                <div class="card mb-3">
+                    <div class="row topPading bottomPadding">
+
+                        <div class="col-5 shop-item-img2" style="position: relative;">
+                            <img src="2greed-6.jpg" alt="greed img"
+                                class="cardImg cardImgAfter border-right shop-item-img22">
+                            <span class="QuickHover"><button class="btn-view2 Quick-View-btn2">Quick View</button></span>
+                        </div>
+
+                        <div class="col-7">
+                            <div class="card-body">
+                                <div>
+                                    <p class="twoGreedTitle productsCaruselLinkHover" id="twoGreedText-1"><a
+                                            href="product.html" class="productsCaruselLink">Castrol GTX ULTRACLEAN 5W-30
+                                            Motor
+                                            Oil, 5 QT </a> </p>
+                                    <p class="twoGreedTitle absolut shop-item-title2" id="twoGreedText-2"><span
+                                            class="twoGreedTitle">Castrol GTX</span> </p>
+                                    <p class="marginTop"><del class="lightGray">$351.99</del> <span
+                                            class="pay shop-item-price2">$88.15</span></p>
+                                </div>
+                                <p class="card-text col-12 cardBottom-left texthover" id="twoGreddBtnMargin">
+                                    <button class="yellowBtnStyle btn shopItem"><span class="FAQDropTitle">ADD TO
+                                            CARD</span></button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <br>
+
+    <!-- რატომ უნდა აირჩიო ჩვენი კომპანია -->
+    <div class="row">
+
+        <div class="col-lg-6 paddingleft15">
+
+            <p class="h4">WHY CHOOSE<br>
+                <span class="size50 color weight700">MOBIMAX</span>
+            </p>
+            <br>
+
+            <div class="row">
+                <p class="col-2"><i class="fas fa-shield-alt fa-3x color"></i></p>
+
+                <div class=" col-10"> <span class="weight700 h4">Car parts Shop</span>
+                    <p>
+                        Mobimax is one of the leading car parts online shops due to a long-term experience and thousands
+                        of satisfied customers.
+                    </p>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="row">
+                <p class="col-2"><i class="fas fa-shield-alt fa-3x color"></i></p>
+
+                <div class=" col-10"> <span class="weight700 h4">High quality brand Auto parts</span>
+                    <p>
+                        A large variety of manufacturers and high quality auto parts guarantee mobility of your vehicle
+                        and safety on roads.
+                    </p>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="row">
+                <p class="col-2"><i class="fas fa-shield-alt fa-3x color"></i></p>
+
+                <div class=" col-10"> <span class="weight700 h4">Original Parts Quality</span>
+                    <p>
+                        Certified and reliable suppliers provide the entire range of auto parts. By MobiMax you get top
+                        brand spare parts.
+                    </p>
+                </div>
+            </div>
+
+
+
+
+
+
+            </p>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="sticiBack2">
+
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- ჩვენი პარტნიორი კომპანიები -->
+    <div>
+        <div class="container ">
+            <br>
+            <div class="col-md-12 text-center">
+                <p class="color h3"><strong>Our partners</strong></p>
+                <p class="text-muted h6">Mobimax Auto Parts distribute.</p>
+            </div>
+        </div>
+        <br>
+
+        <div id="carouselExampleControls1" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner paralaxCaruselPadding">
+
+                <div class="carousel-item active">
+                    <div class="row">
+                        <img class="d-block col-lg-3 col-6 partniorebiImg caruselborder" src="compani12.jpg"
+                            alt="slide">
+                        <img class="d-block col-lg-3 col-6 partniorebiImg caruselborder" src="compani6.jpg" alt="slide">
+                        <img class="d-block col-lg-3 col-6 partniorebiImg caruselborder" src="compani7.jpg" alt="slide">
+                        <img class="d-block col-lg-3 col-6 partniorebiImg caruselborder" src="compani8.jpg" alt="slide">
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="row">
+                        <img class="d-block col-lg-3 col-6 partniorebiImg caruselborder" src="compani10.jpg"
+                            alt="slide">
+                        <img class="d-block col-lg-3 col-6 partniorebiImg caruselborder" src="compani11.jpg"
+                            alt="slide">
+                        <img class="d-block col-lg-3 col-6 partniorebiImg caruselborder" src="compani12.jpg"
+                            alt="slide">
+                        <img class="d-block col-lg-3 col-6 partniorebiImg caruselborder" src="compani13.jpg"
+                            alt="slide">
+                    </div>
+                </div>
+
+            </div>
+            <a class="carousel-control-prev carouselControlerHover" href="#carouselExampleControls1" role="button"
+                data-slide="prev">
+                <span aria-hidden="true"><i class="fas fa-chevron-left paralaxCarouselControlerRight"></i></span>
+            </a>
+            <a class="carousel-control-next carouselControlerHover" href="#carouselExampleControls1" role="button"
+                data-slide="next">
+                <span aria-hidden="true"><i class="fas fa-chevron-right paralaxCarouselControlerRight"></i></span>
+            </a>
+        </div>
+
+        <!-- ========================================================= -->
+        <!-- partnior companis carusel for smoll screen -->
+
+        <div id="carouselExampleControls3" class="carousel slide absolut " data-ride="carousel">
+            <div class="carousel-inner paralaxCaruselPadding">
+
+                <div class="carousel-item active">
+                    <img class="d-block col-12" src="compani12.jpg" alt="slide">
+                </div>
+
+                <div class="carousel-item">
+                    <img class="d-block col-12" src="compani11.jpg" alt="slide">
+                </div>
+
+                <div class="carousel-item">
+                    <img class="d-block col-12" src="compani12.jpg" alt="slide">
+                </div>
+
+                <div class="carousel-item">
+                    <img class="d-block col-12" src="compani13.jpg" alt="slide">
+                </div>
+
+                <div class="carousel-item">
+                    <img class="d-block col-12" src="compani10.jpg" alt="slide">
+                </div>
+
+                <div class="carousel-item">
+                    <img class="d-block col-12" src="compani11.jpg" alt="slide">
+                </div>
+
+                <div class="carousel-item">
+                    <img class="d-block col-12" src="compani12.jpg" alt="slide">
+                </div>
+
+            </div>
+            <a class="carousel-control-prev carouselControlerHover" href="#carouselExampleControls3" role="button"
+                data-slide="prev">
+                <span aria-hidden="true"><i class="fas fa-chevron-left paralaxCarouselControlerRight"></i></span>
+            </a>
+            <a class="carousel-control-next carouselControlerHover" href="#carouselExampleControls3" role="button"
+                data-slide="next">
+                <span aria-hidden="true"><i class="fas fa-chevron-right paralaxCarouselControlerRight"></i></span>
+            </a>
+        </div>
+
+        <!-- ========================================================= -->
+
+
+        <br>
+        <div class="border container"></div>
+        <br>
+    </div>
+    <br><br>
+
+    <!-- სამი გრიდ სისტემა -->
+    <div class="container">
+        <div class="row">
+
+            <!-- პირველი სამი გრიდიდან -->
+            <div class="col-lg-4">
+                <h6 class="weight700">FEATURED PRODUCTS</h6>
+                <div class="border-bottom"></div><br>
+
+                <!-- 1 -->
+                <div class="row">
+                    <div class="col-5">
+                        <img src="2greed-1.jpg" alt="greed" class="indexLastCardImg">
+                    </div>
+
+                    <p class="twoGreedTitle  col-7">
+                        <span class="productsCaruselLinkHover"><a href="product.html" class="productsCaruselLink">For
+                                2006-2016 Chevy Impala Black ...</a></span> <br>
+                        <del class="lightGray">£287.66</del> <span class="pay">$187.33</span>
+                    </p>
+                </div>
+
+                <div class="border-bottom"></div><br>
+
+                <!-- 2 -->
+                <div class="row">
+                    <div class="col-5">
+                        <img src="2greed-2.jpg" alt="greed" class="indexLastCardImg">
+                    </div>
+
+                    <p class="twoGreedTitle  col-7">
+                        <span class="productsCaruselLinkHover"><a href="product.html" class="productsCaruselLink">Fit
+                                2005-2010 Chevy Cobalt 07-10 ...</a></span> <br>
+                        <del class="lightGray">$351.99</del> <span class="pay">$256.77</span>
+                    </p>
+
+                    <br>
+                    <div class="border-bottom"></div>
+                </div>
+
+                <div class="border-bottom"></div><br>
+
+                <!-- 3 -->
+                <div class="row">
+                    <div class="col-5">
+                        <img src="2greed-3.jpg" alt="greed" class="indexLastCardImg">
+                    </div>
+                    <p class="twoGreedTitle  col-7">
+                        <span class="productsCaruselLinkHover"><a href="product.html"
+                                class="productsCaruselLink">Valvoline Full Synthetic High Mil...</a></span> <br>
+                        <del class="lightGray">$114.11</del> <span class="pay">$111.77</span>
+                    </p>
+                    <br>
+                    <div class="border-bottom"></div>
+                </div>
+
+            </div>
+
+            <br><br><br>
+
+            <!-- მეორე სამი გრიდიდან -->
+            <div class="col-lg-4">
+                <h6 class="weight700">ON SALE PRODUCTS</h6>
+                <div class="border-bottom"></div><br>
+
+                <!-- 1 -->
+                <div class="row">
+                    <div class="col-5">
+                        <img src="indexLast-1.jpg" alt="greed" class="indexLastCardImg">
+                    </div>
+                    <p class="twoGreedTitle  col-7">
+                        <span class="productsCaruselLinkHover"><a href="product.html" class="productsCaruselLink">For
+                                06-10 Explorer Sport Trac Pai...</a></span> <br>
+                        <del class="lightGray">$715.00</del> <span class="pay">$684.00</span>
+                    </p>
+
+                </div>
+
+                <div class="border-bottom"></div><br>
+
+                <!-- 2 -->
+                <div class="row">
+                    <div class="col-5">
+                        <img src="indexLast-2.jpg" alt="greed" class="indexLastCardImg">
+                    </div>
+                    <p class="twoGreedTitle  col-7">
+                        <span class="productsCaruselLinkHover"><a href="product.html" class="productsCaruselLink">Fit
+                                2006-2008 BMW E90 3-Series 4D...</a></span> <br>
+                        <del class="lightGray">$684.41 </del> <span class="pay">$651.77</span>
+                    </p>
+                    <br>
+                    <div class="border-bottom"></div>
+                </div>
+
+                <div class="border-bottom"></div><br>
+
+                <!-- 3 -->
+                <div class="row">
+                    <div class="col-5">
+                        <img src="indexLast-3.jpg" alt="greed" class="indexLastCardImg">
+                    </div>
+                    <p class="twoGreedTitle  col-7">
+                        <span class="productsCaruselLinkHover"><a href="product.html"
+                                class="productsCaruselLink">Camshaft and Roller Lifters (16) ...</a></span> <br>
+                        <del class="lightGray">$651.77 </del> <span class="pay">$544.47</span>
+                    </p>
+                    <br>
+                    <div class="border-bottom"></div>
+                </div>
+            </div>
+
+            <br><br><br>
+
+            <!-- მესამე სამი გრიდიდან -->
+            <div class="col-lg-4">
+                <h6 class="weight700">RECENT PRODUCTS</h6>
+                <div class="border-bottom"></div><br>
+
+                <!-- 1 -->
+                <div class="row">
+                    <div class="col-5">
+                        <img src="indexLast-4.jpg" alt="greed" class="indexLastCardImg">
+                    </div>
+                    <p class="twoGreedTitle  col-7">
+                        <span class="productsCaruselLinkHover"><a href="product.html"
+                                class="productsCaruselLink">TACKLIFE T6 Car Jump Starter - 60...</a></span> <br>
+                        <del class="lightGray">$351.99</del> <span class="pay">$88.15</span>
+                    </p>
+
+                </div>
+
+                <div class="border-bottom"></div><br>
+
+                <!-- 2 -->
+                <div class="row">
+                    <div class="col-5">
+                        <img src="indexLast-5.jpg" alt="greed" class="indexLastCardImg">
+                    </div>
+                    <p class="twoGreedTitle  col-7">
+                        <span class="productsCaruselLinkHover"><a href="product.html" class="productsCaruselLink">Ultra
+                                Performance 2 Gauge 20' Jum...</a></span> <br>
+                        <del class="lightGray">$12.77</del> <span class="pay">$9.88</span>
+                    </p>
+                    <br>
+                    <div class="border-bottom"></div>
+                </div>
+
+                <div class="border-bottom"></div><br>
+
+                <!-- 3 -->
+                <div class="row">
+                    <div class="col-5">
+                        <img src="greed3.jpg" alt="greed" class="indexLastCardImg">
+                    </div>
+
+                    <p class="twoGreedTitle  col-7">
+                        <span class="productsCaruselLinkHover"><a href="product.html" class="productsCaruselLink">Turtle
+                                Wax Car Care Kit</a></span> <br>
+                        <span class="pay">$10.00</span>
+                    </p>
+                    <br><br>
+                    <div class="border-bottom"></div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <br>
+
+    <!-- footer -->
+    <footer>
+        <div class="p-4 footerBack text-white">
+            <div class="container">
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                        <h5 class="text-uppercase"><span class="footerLogo1">mobi</span><span
+                                class="footerLogo2">max</span></h5>
+                        <br>
+                        <p class="footerText">
+                            We work on market over 20 years. We sale only original auto parts and gained confidence of
+                            320k + clients. Buy from MobiMax, join our big community.
+                        </p>
+                        <div class=" backHoverYellow" style="width: 175px; height: 50px;">
+                            <button type="button" class="form-control "><span class="weight700">find</span></button>
+                        </div>
+                    </div>
+
+
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                        <span class="footerText">
+                            CUSTOMER SERVICES
+                        </span>
+                        <p class="border-bottom"></p>
+                        <br>
+                        <P class="h5 linkHover">
+                        <p class="linkHover marginBottom footerLinks"><a href="home.html" class="linkStyle">home</a></p>
+                        <p class="linkHover marginBottom footerLinks"><a href="about.html" class="linkStyle">about</a>
+                        </p>
+                        <p class="linkHover marginBottom footerLinks"><a href="career.html" class="linkStyle">carrer</a>
+                        </p>
+                        <p class="linkHover marginBottom footerLinks"><a href="FAQ.html" class="linkStyle test">FAQ</a>
+                        </p>
+                        </P>
+
+                    </div>
+
+
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">CONTACTS</h5>
+                        <br>
+                        <p>
+                            <i class="far fa-envelope-open fa-2x color"></i> <span
+                                class="choisLeftPadding">support@mobimax.com</span>
+                        </p>
+
+                        <p>
+                            <i class="fas fa-phone fa-2x color"></i> <span class="choisLeftPadding">070 5159 1537</span>
+                        </p>
+
+                        <p>
+                            <i class="far fa-clock fa-2x color"></i> <span class="choisLeftPadding">Mon. - Sat. 10:00 am
+                                - 20:00 pm</span>
+                        </p>
+
+                        <p>
+                            <i class="fab fa-youtube fa-2x youtube animacion directional-transition"></i>
+                            <i class="fab fa-facebook-square fa-2x facebook animacion directional-transition"></i>
+                            <i class="fab fa-instagram fa-2x instagram animacion directional-transition"></i>
+                            <i class="fab fa-twitter-square fa-2x twiter animacion directional-transition"></i>
+                            <i class="fab fa-skype fa-2x skype animacion directional-transition"></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+</body>
+
+</html>
+
+<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script src="homeJs.js"></script>
